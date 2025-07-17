@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Profil Prestataire - Tog-Services{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4">Mon Profil Prestataire</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Informations professionnelles</h5>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom complet</label>
+                            <input type="text" class="form-control" id="name" name="name" value="Ama D.">
+                        </div>
+                        <div class="mb-3">
+                            <label for="service_type" class="form-label">Type de service</label>
+                            <select class="form-select" id="service_type" name="service_type">
+                                <option value="menage" selected>Ménage</option>
+                                <option value="livraison">Livraison</option>
+                                <option value="transport">Transport</option>
+                                <option value="bricolage">Bricolage</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description des services</label>
+                            <textarea class="form-control" id="description" name="description" rows="3">Nettoyage professionnel de maisons et bureaux</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="zones" class="form-label">Zones d'intervention</label>
+                            <input type="text" class="form-control" id="zones" name="zones" value="Lomé, Agoè, Adidogomé">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

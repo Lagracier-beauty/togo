@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Tog-Services - Accueil{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    Services à la demande au Togo
+                </h1>
+                <p class="lead mb-4">
+                    Trouvez rapidement des prestataires qualifiés pour tous vos besoins quotidiens : 
+                    livraison, transport, ménage, bricolage et plus encore.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'users:register' %}" class="btn btn-light btn-lg">
+                        <i class="fas fa-user-plus me-2"></i>Devenir Client
+                    </a>
+                    <a href="{% url 'providers:provider_register' %}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-briefcase me-2"></i>Devenir Prestataire
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/hero-image.jpg' %}" alt="Services Togo" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Section -->
+<section class="search-section py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h3 class="text-center mb-4">
+                            <i class="fas fa-search me-2"></i>Rechercher un service
+                        </h3>
+                        
+                        <form hx-post="{% url 'users:search_services' %}" hx-target="#search-results" hx-swap="innerHTML">
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="service_type" class="form-label">Type de service</label>
+                                    <select class="form-select" id="service_type" name="service_type" required>
+                                        <option value="">Choisir un service</option>
+                                        <option value="livraison">Livraison de Repas</option>
+                                        <option value="courses">Courses & Livraison</option>
+                                        <option value="transport">Transport</option>
+                                        <option value="menage">Ménage</option>
+                                        <option value="bricolage">Petits Travaux & Bricolage</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="location" class="form-label">Localisation</label>
+                                    <input type="text" class="form-control" id="location" name="location" 
+                                           placeholder="Entrez votre adresse" required>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="fas fa-search me-2"></i>Rechercher
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Results -->
+        <div id="search-results" class="mt-4"></div>
+    </div>
+</section>
+
+<!-- Services Categories -->
+<section class="services-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Nos Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Livraison de Repas</h5>
+                        <p class="card-text">Commandez vos plats préférés et faites-vous livrer rapidement à domicile.</p>
+                        <a href="{% url 'services:services' %}?category=livraison" class="btn btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Courses & Livraison</h5>
+                        <p class="card-text">Faites vos courses sans sortir de chez vous, nous nous chargeons de tout.</p>
+                        <a href="{% url 'services:services' %}?category=courses" class="btn btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-car fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Transport</h5>
+                        <p class="card-text">Déplacez-vous en toute sécurité avec nos chauffeurs professionnels.</p>
+                        <a href="{% url 'services:services' %}?category=transport" class="btn btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-broom fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Ménage</h5>
+                        <p class="card-text">Confiez le nettoyage de votre maison à nos professionnels qualifiés.</p>
+                        <a href="{% url 'services:services' %}?category=menage" class="btn btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Bricolage</h5>
+                        <p class="card-text">Petits travaux, réparations, installation... Nos artisans sont là pour vous.</p>
+                        <a href="{% url 'services:services' %}?category=bricolage" class="btn btn-outline-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-plus fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Autres Services</h5>
+                        <p class="card-text">Découvrez tous nos autres services disponibles sur la plateforme.</p>
+                        <a href="{% url 'services:services' %}" class="btn btn-outline-primary">Voir tous les services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="how-it-works py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Comment ça marche ?</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h4 mb-0">1</span>
+                    </div>
+                    <h5>Recherchez</h5>
+                    <p>Trouvez le service dont vous avez besoin en quelques clics.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h4 mb-0">2</span>
+                    </div>
+                    <h5>Commandez</h5>
+                    <p>Passez votre commande en quelques étapes simples.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h4 mb-0">3</span>
+                    </div>
+                    <h5>Suivez</h5>
+                    <p>Suivez votre prestataire en temps réel.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h4 mb-0">4</span>
+                    </div>
+                    <h5>Évaluez</h5>
+                    <p>Donnez votre avis et notez le service reçu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics -->
+<section class="stats-section py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="h2 text-primary mb-2">1000+</div>
+                <p class="text-muted">Clients satisfaits</p>
+            </div>
+            <div class="col-md-3">
+                <div class="h2 text-primary mb-2">500+</div>
+                <p class="text-muted">Prestataires qualifiés</p>
+            </div>
+            <div class="col-md-3">
+                <div class="h2 text-primary mb-2">50+</div>
+                <p class="text-muted">Types de services</p>
+            </div>
+            <div class="col-md-3">
+                <div class="h2 text-primary mb-2">24/7</div>
+                <p class="text-muted">Support client</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

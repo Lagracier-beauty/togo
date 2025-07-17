@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Tableau de bord Admin - Tog-Services{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4">Tableau de bord Administrateur</h2>
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">
+                    <h3>1,250</h3>
+                    <p>Utilisateurs</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body text-center">
+                    <h3>450</h3>
+                    <p>Prestataires</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-dark">
+                <div class="card-body text-center">
+                    <h3>2,500</h3>
+                    <p>Commandes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body text-center">
+                    <h3>15,000</h3>
+                    <p>Revenus (FCFA)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            <h4>Actions rapides</h4>
+            <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Gérer les utilisateurs</a>
+                <a href="#" class="btn btn-success">Gérer les prestataires</a>
+                <a href="#" class="btn btn-warning">Voir les commandes</a>
+                <a href="#" class="btn btn-info">Rapports</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Tableau de bord Prestataire - Tog-Services{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4">Tableau de bord Prestataire</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-cog fa-2x text-primary mb-2"></i>
+                    <h5 class="card-title">Mon Profil</h5>
+                    <a href="{% url 'providers:provider_profile' %}" class="btn btn-outline-primary btn-sm">Voir / Modifier</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-briefcase fa-2x text-primary mb-2"></i>
+                    <h5 class="card-title">Mes Prestations</h5>
+                    <a href="{% url 'providers:provider_orders' %}" class="btn btn-outline-primary btn-sm">Voir l'historique</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-wallet fa-2x text-primary mb-2"></i>
+                    <h5 class="card-title">Mes Gains</h5>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Voir mes gains</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            <h4>Résumé de mes prestations récentes</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Statut</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ménage</td>
+                        <td>02/07/2024</td>
+                        <td><span class="badge bg-success">Terminé</span></td>
+                        <td><a href="#" class="btn btn-sm btn-outline-secondary">Détail</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bricolage</td>
+                        <td>30/06/2024</td>
+                        <td><span class="badge bg-warning text-dark">En attente</span></td>
+                        <td><a href="#" class="btn btn-sm btn-outline-secondary">Détail</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %} 

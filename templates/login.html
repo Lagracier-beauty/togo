@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Connexion - Tog-Services{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h2 class="mb-4 text-center">Connexion</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Email ou Numéro de téléphone</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="mb-3 text-end">
+                            <a href="#" class="link-primary">Mot de passe oublié ?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                    </form>
+                    <div class="mt-3 text-center">
+                        <span>Pas encore de compte ? <a href="{% url 'users:register' %}">Inscrivez-vous</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

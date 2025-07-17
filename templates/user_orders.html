@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Mes Commandes - Tog-Services{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="mb-4">Mes Commandes</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Service</th>
+                    <th>Prestataire</th>
+                    <th>Date</th>
+                    <th>Statut</th>
+                    <th>Prix</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>Livraison de repas</td>
+                    <td>Kossi A.</td>
+                    <td>03/07/2024</td>
+                    <td><span class="badge bg-success">Terminé</span></td>
+                    <td>2,500 FCFA</td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary">Détail</a></td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>Transport</td>
+                    <td>Yawovi K.</td>
+                    <td>01/07/2024</td>
+                    <td><span class="badge bg-warning text-dark">En cours</span></td>
+                    <td>1,500 FCFA</td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary">Suivre</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %} 

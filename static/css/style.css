@@ -1,0 +1,95 @@
+/* Styles personnalisés pour Tog-Services */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Search Section */
+.search-section {
+    background-color: #f8f9fa;
+}
+
+/* Statistics */
+.stats-section {
+    background-color: #ffffff;
+}
+
+.stats-section .h2 {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
+        text-align: center;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* Custom colors */
+.text-primary {
+    color: #007bff !important;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Loading animation for HTMX */
+.htmx-indicator {
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+.htmx-request .htmx-indicator {
+    opacity: 1;
+}
+
+.htmx-request.htmx-indicator {
+    opacity: 1;
+} 

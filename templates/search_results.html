@@ -1,0 +1,29 @@
+{% if providers %}
+    <div class="row g-4">
+        {% for provider in providers %}
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <img src="{{ provider.image }}" class="rounded-circle mb-3" width="80" height="80" alt="Prestataire">
+                    <h5 class="card-title">{{ provider.name }}</h5>
+                    <p class="mb-1">{{ provider.service }}</p>
+                    {% if provider.available %}
+                        <span class="badge bg-success mb-2">Disponible</span>
+                    {% else %}
+                        <span class="badge bg-warning text-dark mb-2">Occupé</span>
+                    {% endif %}
+                    <div class="mb-2">
+                        <i class="fas fa-star text-warning"></i> {{ provider.rating }} ({{ provider.reviews }} avis)
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Voir le profil</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">
+        <i class="fas fa-info-circle me-2"></i>
+        Aucun prestataire trouvé pour cette recherche.
+    </div>
+{% endif %} 
