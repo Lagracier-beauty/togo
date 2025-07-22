@@ -19,44 +19,41 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2" style="border-radius: 0 0 18px 18px;">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'users:home' %}">
-                <i class="fas fa-handshake me-2"></i>
+            <a class="navbar-brand d-flex align-items-center gap-2 text-primary fw-bold fs-3" href="{% url 'users:home' %}" style="letter-spacing: -1px;">
+                <i class="fas fa-handshake"></i>
                 Tog-Services
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav me-auto gap-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'users:home' %}">Accueil</a>
+                        <a class="nav-link px-3 py-2 rounded-md fw-semibold text-muted hover:text-primary" href="{% url 'users:home' %}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'services:services' %}">Services</a>
+                        <a class="nav-link px-3 py-2 rounded-md fw-semibold text-muted hover:text-primary" href="{% url 'services:services' %}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'providers:providers' %}">Prestataires</a>
+                        <a class="nav-link px-3 py-2 rounded-md fw-semibold text-muted hover:text-primary" href="{% url 'providers:providers' %}">Prestataires</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'support:support' %}">Support</a>
+                        <a class="nav-link px-3 py-2 rounded-md fw-semibold text-muted hover:text-primary" href="{% url 'support:support' %}">Support</a>
                     </li>
                 </ul>
-                
-                <ul class="navbar-nav">
+                <ul class="navbar-nav gap-2 align-items-center">
                     {% if user.is_authenticated %}
                         {% if user.is_staff %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'dashboard:admin_dashboard' %}">
+                                <a class="nav-link px-3 py-2 rounded-md fw-semibold text-primary" href="{% url 'dashboard:admin_dashboard' %}">
                                     <i class="fas fa-cog me-1"></i>Admin
                                 </a>
                             </li>
                         {% endif %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle px-3 py-2 rounded-md fw-semibold text-primary bg-primary-50" href="#" role="button" data-bs-toggle="dropdown">
                                 <i class="fas fa-user me-1"></i>{{ user.username }}
                             </a>
                             <ul class="dropdown-menu">
@@ -68,12 +65,12 @@
                             </ul>
                         </li>
                     {% else %}
-                                                    <li class="nav-item">
-                                <a class="nav-link" href="{% url 'users:login' %}">Connexion</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-outline-light btn-sm ms-2" href="{% url 'users:register' %}">Inscription</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-primary rounded-md px-4 fw-semibold ms-2" href="{% url 'users:login' %}">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary rounded-md px-4 fw-semibold ms-2 text-white" href="{% url 'users:register' %}">Inscription</a>
+                        </li>
                     {% endif %}
                 </ul>
             </div>

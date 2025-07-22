@@ -32,7 +32,7 @@ def user_login(request):
         if user is not None:
             login(request, user)
             messages.success(request, 'Connexion réussie !')
-            return redirect('user_dashboard')
+            return redirect('users:user_dashboard')
         else:
             errors['general'] = "Identifiants incorrects."
     return render(request, 'login.html', {'errors': errors})
