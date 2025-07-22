@@ -108,7 +108,9 @@ def user_profile(request):
 @login_required
 def user_orders(request):
     """Historique des commandes utilisateur"""
-    return render(request, 'user_orders.html')
+    from orders.models import Order
+    commandes = Order.objects.filter(user=request.user).order_by('-created_at')
+    return render(request, 'user_orders.html', {'commandes': commandes})
 
 def search_services(request):
     """Recherche de services (pour HTMX)"""

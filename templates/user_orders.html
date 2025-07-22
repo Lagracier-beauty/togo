@@ -17,24 +17,29 @@
                 </tr>
             </thead>
             <tbody>
+            {% for commande in commandes %}
                 <tr>
-                    <td>#001</td>
-                    <td>Livraison de repas</td>
-                    <td>Kossi A.</td>
-                    <td>03/07/2024</td>
-          <td><span class="badge bg-success rounded-pill px-3 py-2">Terminé</span></td>
-                    <td>2,500 FCFA</td>
-          <td><a href="#" class="btn btn-sm btn-outline-primary rounded-md">Détail</a></td>
+                    <td>#{{ commande.id }}</td>
+                    <td>{{ commande.get_service_type_display }}</td>
+                    <td>{{ commande.provider.user.get_full_name }}</td>
+                    <td>{{ commande.scheduled_date|date:"d/m/Y" }}</td>
+                    <td>
+                        {% if commande.status == 'termine' %}
+                            <span class="badge bg-success rounded-pill px-3 py-2">Terminé</span>
+                        {% elif commande.status == 'en_cours' %}
+                            <span class="badge bg-warning text-dark rounded-pill px-3 py-2">En cours</span>
+                        {% elif commande.status == 'en_attente' %}
+                            <span class="badge bg-secondary rounded-pill px-3 py-2">En attente</span>
+                        {% elif commande.status == 'annule' %}
+                            <span class="badge bg-danger rounded-pill px-3 py-2">Annulé</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ commande.price|floatformat:0 }} FCFA</td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary rounded-md">Détail</a></td>
                 </tr>
-                <tr>
-                    <td>#002</td>
-                    <td>Transport</td>
-                    <td>Yawovi K.</td>
-                    <td>01/07/2024</td>
-          <td><span class="badge bg-warning text-dark rounded-pill px-3 py-2">En cours</span></td>
-                    <td>1,500 FCFA</td>
-          <td><a href="#" class="btn btn-sm btn-outline-primary rounded-md">Suivre</a></td>
-                </tr>
+            {% empty %}
+                <tr><td colspan="7" class="text-center">Aucune commande trouvée.</td></tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>

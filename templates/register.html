@@ -1,40 +1,40 @@
 {% extends 'base.html' %}
 {% block title %}Inscription - Tog-Services{% endblock %}
 {% block content %}
-<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-2">
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-100 via-white to-primary-50 py-12 px-2">
   <div class="w-full max-w-md">
-    <div class="bg-white shadow-xl rounded-3xl px-8 py-10">
-      <h2 class="text-3xl font-extrabold text-center text-primary mb-8 tracking-tight">Inscription Client</h2>
-      <form method="post" class="space-y-6">
+    <div class="bg-white/90 shadow-2xl rounded-3xl px-8 py-12 border border-primary-100">
+      <h2 class="text-4xl font-extrabold text-center text-primary mb-10 tracking-tight drop-shadow">Inscription Client</h2>
+      <form method="post" class="space-y-7">
         {% csrf_token %}
         <div class="relative">
-          <input type="text" id="name" name="name" class="form-control block w-full px-4 py-3 text-lg bg-transparent border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition placeholder-transparent peer" placeholder="Nom complet" value="{{ form.name|default:'' }}" required>
-          <label for="name" class="absolute left-4 top-3 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500">Nom complet</label>
-          <span class="absolute right-4 top-3 text-gray-400"><i class="fa fa-user"></i></span>
+          <input type="text" id="name" name="name" class="form-control block w-full px-5 py-4 text-lg bg-transparent border-2 border-primary-200 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary/30 transition placeholder-transparent peer shadow-sm" placeholder="Nom complet" value="{{ form.name|default:'' }}" required>
+          <label for="name" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Nom complet</label>
+          <span class="absolute right-5 top-4 text-primary-400 text-xl"><i class="fa fa-user-circle"></i></span>
           {% if errors.name %}<p class="mt-2 text-sm text-red-600">{{ errors.name }}</p>{% endif %}
         </div>
         <div class="relative">
-          <input type="email" id="email" name="email" class="form-control block w-full px-4 py-3 text-lg bg-transparent border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition placeholder-transparent peer" placeholder="Email" value="{{ form.email|default:'' }}" required>
-          <label for="email" class="absolute left-4 top-3 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500">Email</label>
-          <span class="absolute right-4 top-3 text-gray-400"><i class="fa fa-envelope"></i></span>
+          <input type="email" id="email" name="email" class="form-control block w-full px-5 py-4 text-lg bg-transparent border-2 border-primary-200 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary/30 transition placeholder-transparent peer shadow-sm" placeholder="Email" value="{{ form.email|default:'' }}" required>
+          <label for="email" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Email</label>
+          <span class="absolute right-5 top-4 text-primary-400 text-xl"><i class="fa fa-envelope"></i></span>
           {% if errors.email %}<p class="mt-2 text-sm text-red-600">{{ errors.email }}</p>{% endif %}
         </div>
         <div class="relative">
-          <input type="text" id="phone" name="phone" class="form-control block w-full px-4 py-3 text-lg bg-transparent border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition placeholder-transparent peer" placeholder="Numéro de téléphone" value="{{ form.phone|default:'' }}" required>
-          <label for="phone" class="absolute left-4 top-3 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500">Numéro de téléphone</label>
-          <span class="absolute right-4 top-3 text-gray-400"><i class="fa fa-phone"></i></span>
+          <input type="text" id="phone" name="phone" class="form-control block w-full px-5 py-4 text-lg bg-transparent border-2 border-primary-200 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary/30 transition placeholder-transparent peer shadow-sm" placeholder="Numéro de téléphone" value="{{ form.phone|default:'' }}" required>
+          <label for="phone" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Numéro de téléphone</label>
+          <span class="absolute right-5 top-4 text-primary-400 text-xl"><i class="fa fa-phone"></i></span>
           {% if errors.phone %}<p class="mt-2 text-sm text-red-600">{{ errors.phone }}</p>{% endif %}
         </div>
         <div class="relative">
-          <input type="password" id="password" name="password" class="form-control block w-full px-4 py-3 text-lg bg-transparent border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 transition placeholder-transparent peer" placeholder="Mot de passe" required>
-          <label for="password" class="absolute left-4 top-3 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500">Mot de passe</label>
-          <span class="absolute right-4 top-3 text-gray-400"><i class="fa fa-lock"></i></span>
+          <input type="password" id="password" name="password" class="form-control block w-full px-5 py-4 text-lg bg-transparent border-2 border-primary-200 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary/30 transition placeholder-transparent peer shadow-sm" placeholder="Mot de passe" required>
+          <label for="password" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Mot de passe</label>
+          <span class="absolute right-5 top-4 text-primary-400 text-xl"><i class="fa fa-lock"></i></span>
           {% if errors.password %}<p class="mt-2 text-sm text-red-600">{{ errors.password }}</p>{% endif %}
         </div>
         {% if errors.general %}<div class="mb-4 text-red-600 text-center">{{ errors.general }}</div>{% endif %}
-        <button type="submit" class="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg shadow transition">S'inscrire</button>
+        <button type="submit" class="w-full py-4 rounded-2xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg shadow-lg transition">S'inscrire</button>
       </form>
-      <div class="mt-8 text-center text-gray-600 text-base">
+      <div class="mt-10 text-center text-gray-600 text-base">
         Déjà un compte ? <a href="{% url 'users:login' %}" class="text-primary-600 font-semibold hover:underline">Connectez-vous</a>
       </div>
     </div>
