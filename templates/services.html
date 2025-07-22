@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Services - Tog-Services{% endblock %}
 {% block content %}
-<div class="container py-5">
-    <h2 class="mb-4">Tous les services</h2>
-    <form class="row g-3 mb-4">
+<div class="container py-6">
+  <h2 class="mb-5 font-bold text-2xl">Tous les services</h2>
+  <form class="row g-4 mb-5">
         <div class="col-md-4">
             <label for="category" class="form-label">Catégorie</label>
             <select class="form-select" id="category" name="category">
@@ -20,50 +20,44 @@
             <input type="text" class="form-control" id="location" name="location" placeholder="Ville ou quartier">
         </div>
         <div class="col-md-4 d-flex align-items-end">
-            <button type="submit" class="btn btn-primary w-100">Filtrer</button>
+      <button type="submit" class="btn btn-primary w-100 py-2 font-bold">Filtrer</button>
         </div>
     </form>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Prestataire">
-                    <h5 class="card-title">Kossi A.</h5>
-                    <p class="mb-1">Livraison de repas</p>
-                    <span class="badge bg-success mb-2">Disponible</span>
+      <div class="card h-100 shadow-lg border-0 p-4 text-center">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle shadow mb-3" width="90" height="90" alt="Prestataire">
+        <h5 class="card-title font-semibold">Kossi A.</h5>
+        <p class="mb-1 text-muted">Livraison de repas</p>
+        <span class="badge bg-success rounded-pill px-3 py-2 mb-2">Disponible</span>
                     <div class="mb-2">
-                        <i class="fas fa-star text-warning"></i> 4.8 (120 avis)
+          <i class="fas fa-star text-warning"></i> 4.8 <span class="text-muted">(120 avis)</span>
                     </div>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Voir le profil</a>
-                </div>
+        <a href="#" class="btn btn-outline-primary w-100">Voir le profil</a>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Prestataire">
-                    <h5 class="card-title">Ama D.</h5>
-                    <p class="mb-1">Ménage</p>
-                    <span class="badge bg-success mb-2">Disponible</span>
+      <div class="card h-100 shadow-lg border-0 p-4 text-center">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle shadow mb-3" width="90" height="90" alt="Prestataire">
+        <h5 class="card-title font-semibold">Ama D.</h5>
+        <p class="mb-1 text-muted">Ménage</p>
+        <span class="badge bg-success rounded-pill px-3 py-2 mb-2">Disponible</span>
                     <div class="mb-2">
-                        <i class="fas fa-star text-warning"></i> 4.9 (98 avis)
+          <i class="fas fa-star text-warning"></i> 4.9 <span class="text-muted">(98 avis)</span>
                     </div>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Voir le profil</a>
-                </div>
+        <a href="#" class="btn btn-outline-primary w-100">Voir le profil</a>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body text-center">
-                    <img src="https://randomuser.me/api/portraits/men/54.jpg" class="rounded-circle mb-3" width="80" height="80" alt="Prestataire">
-                    <h5 class="card-title">Yawovi K.</h5>
-                    <p class="mb-1">Transport</p>
-                    <span class="badge bg-warning text-dark mb-2">Occupé</span>
+      <div class="card h-100 shadow-lg border-0 p-4 text-center">
+        <img src="https://randomuser.me/api/portraits/men/54.jpg" class="rounded-circle shadow mb-3" width="90" height="90" alt="Prestataire">
+        <h5 class="card-title font-semibold">Yawovi K.</h5>
+        <p class="mb-1 text-muted">Transport</p>
+        <span class="badge bg-warning text-dark rounded-pill px-3 py-2 mb-2">Occupé</span>
                     <div class="mb-2">
-                        <i class="fas fa-star text-warning"></i> 4.7 (75 avis)
+          <i class="fas fa-star text-warning"></i> 4.7 <span class="text-muted">(75 avis)</span>
                     </div>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Voir le profil</a>
-                </div>
+        <a href="#" class="btn btn-outline-primary w-100">Voir le profil</a>
             </div>
         </div>
     </div>

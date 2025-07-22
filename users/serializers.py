@@ -38,6 +38,10 @@ class RegisterSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         if attrs['password'] != attrs['password_confirm']:
             raise serializers.ValidationError("Les mots de passe ne correspondent pas.")
+        # Vérifier unicité email
+        email = attrs.get('email', '').lower()
+        if User.objects.filter(email=email).exists():
+            raise serializers.ValidationError({"email": "Cet email est déjà utilisé."})
         return attrs
     
     def create(self, validated_data):
@@ -59,10 +63,21 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField()
     
     def validate(self, attrs):
-        username = attrs.get('username')
+        username_or_email = attrs.get('username')
         password = attrs.get('password')
-        
-        if username and password:
+        user = None
+        if username_or_email and password:
+            # Permettre la connexion par email ou username
+            from django.contrib.auth import get_user_model
+            UserModel = get_user_model()
+            if '@' in username_or_email:
+                try:
+                    user_obj = UserModel.objects.get(email=username_or_email)
+                    username = user_obj.username
+                except UserModel.DoesNotExist:
+                    username = username_or_email
+            else:
+                username = username_or_email
             user = authenticate(username=username, password=password)
             if not user:
                 raise serializers.ValidationError('Identifiants invalides.')
@@ -70,8 +85,7 @@ class LoginSerializer(serializers.Serializer):
                 raise serializers.ValidationError('Compte désactivé.')
             attrs['user'] = user
         else:
-            raise serializers.ValidationError('Nom d\'utilisateur et mot de passe requis.')
-        
+            raise serializers.ValidationError('Nom d\'utilisateur/email et mot de passe requis.')
         return attrs
 
 class ChangePasswordSerializer(serializers.Serializer):

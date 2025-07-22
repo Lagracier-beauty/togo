@@ -3,31 +3,90 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponse
+from django.contrib.auth.models import User
+from users.models import UserProfile
 
 def home(request):
     """Page d'accueil"""
     return render(request, 'home.html')
 
 def user_login(request):
-    """Page de connexion"""
+    """Page de connexion avec feedback et connexion par email ou username"""
+    errors = {}
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        username_or_email = request.POST.get('username', '').strip()
+        password = request.POST.get('password', '')
+        user = None
+        # Permettre la connexion par email ou username
+        from django.contrib.auth import get_user_model
+        UserModel = get_user_model()
+        if '@' in username_or_email:
+            try:
+                user_obj = UserModel.objects.get(email=username_or_email)
+                username = user_obj.username
+            except UserModel.DoesNotExist:
+                username = username_or_email
+        else:
+            username = username_or_email
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             messages.success(request, 'Connexion réussie !')
             return redirect('user_dashboard')
         else:
-            messages.error(request, 'Identifiants incorrects.')
-    return render(request, 'login.html')
+            errors['general'] = "Identifiants incorrects."
+    return render(request, 'login.html', {'errors': errors})
 
 def user_register(request):
-    """Page d'inscription client"""
+    """Page d'inscription client avec création réelle d'utilisateur et validation"""
     if request.method == 'POST':
-        # Pour l'instant, on affiche juste un message de succès
-        messages.success(request, 'Inscription réussie ! Vous pouvez maintenant vous connecter.')
-        return redirect('login')
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip().lower()
+        phone = request.POST.get('phone', '').strip()
+        password = request.POST.get('password', '')
+        errors = {}
+
+        # Validation des champs
+        if not name:
+            errors['name'] = "Le nom complet est requis."
+        if not email:
+            errors['email'] = "L'email est requis."
+        elif User.objects.filter(email=email).exists():
+            errors['email'] = "Cet email est déjà utilisé."
+        if not phone:
+            errors['phone'] = "Le numéro de téléphone est requis."
+        if not password or len(password) < 8:
+            errors['password'] = "Le mot de passe doit contenir au moins 8 caractères."
+
+        # Découper le nom complet
+        first_name, *last_name = name.split(' ', 1)
+        last_name = last_name[0] if last_name else ''
+
+        if not errors:
+            try:
+                user = User.objects.create_user(
+                    username=email,
+                    email=email,
+                    first_name=first_name,
+                    last_name=last_name,
+                    password=password
+                )
+                # Mettre à jour le profil
+                user.profile.phone = phone
+                user.profile.save()
+                messages.success(request, "Inscription réussie ! Vous pouvez maintenant vous connecter.")
+                return redirect('users:login')
+            except Exception as e:
+                errors['general'] = "Erreur lors de la création du compte. Veuillez réessayer."
+        # Afficher les erreurs dans le template
+        return render(request, 'register.html', {
+            'errors': errors,
+            'form': {
+                'name': name,
+                'email': email,
+                'phone': phone
+            }
+        })
     return render(request, 'register.html')
 
 def user_logout(request):

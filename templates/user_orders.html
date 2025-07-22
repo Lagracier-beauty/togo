@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Mes Commandes - Tog-Services{% endblock %}
 {% block content %}
-<div class="container py-5">
-    <h2 class="mb-4">Mes Commandes</h2>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
+<div class="container py-6">
+  <h2 class="mb-5 font-bold text-2xl">Mes Commandes</h2>
+  <div class="table-responsive rounded-lg shadow-lg">
+    <table class="table align-middle mb-0 bg-white">
+      <thead class="bg-primary text-white">
                 <tr>
                     <th>ID</th>
                     <th>Service</th>
@@ -22,18 +22,18 @@
                     <td>Livraison de repas</td>
                     <td>Kossi A.</td>
                     <td>03/07/2024</td>
-                    <td><span class="badge bg-success">Terminé</span></td>
+          <td><span class="badge bg-success rounded-pill px-3 py-2">Terminé</span></td>
                     <td>2,500 FCFA</td>
-                    <td><a href="#" class="btn btn-sm btn-outline-primary">Détail</a></td>
+          <td><a href="#" class="btn btn-sm btn-outline-primary rounded-md">Détail</a></td>
                 </tr>
                 <tr>
                     <td>#002</td>
                     <td>Transport</td>
                     <td>Yawovi K.</td>
                     <td>01/07/2024</td>
-                    <td><span class="badge bg-warning text-dark">En cours</span></td>
+          <td><span class="badge bg-warning text-dark rounded-pill px-3 py-2">En cours</span></td>
                     <td>1,500 FCFA</td>
-                    <td><a href="#" class="btn btn-sm btn-outline-primary">Suivre</a></td>
+          <td><a href="#" class="btn btn-sm btn-outline-primary rounded-md">Suivre</a></td>
                 </tr>
             </tbody>
         </table>

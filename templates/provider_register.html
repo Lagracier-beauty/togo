@@ -1,49 +1,45 @@
 {% extends 'base.html' %}
 {% block title %}Inscription Prestataire - Tog-Services{% endblock %}
 {% block content %}
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-7">
-            <div class="card shadow">
-                <div class="card-body p-4">
-                    <h2 class="mb-4 text-center">Inscription Prestataire</h2>
-                    <form method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nom complet</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Numéro de téléphone</label>
-                            <input type="text" class="form-control" id="phone" name="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="service_type" class="form-label">Type de service</label>
-                            <select class="form-select" id="service_type" name="service_type" required>
-                                <option value="">Choisir...</option>
-                                <option value="livraison">Livraison</option>
-                                <option value="transport">Transport</option>
-                                <option value="menage">Ménage</option>
-                                <option value="bricolage">Bricolage</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="documents" class="form-label">Documents justificatifs</label>
-                            <input type="file" class="form-control" id="documents" name="documents" multiple required>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">S'inscrire comme prestataire</button>
-                    </form>
-                    <div class="mt-3 text-center">
-                        <span>Déjà un compte ? <a href="{% url 'users:login' %}">Connectez-vous</a></span>
-                    </div>
-                </div>
-            </div>
+<div class="flex min-h-screen items-center justify-center bg-gray-50 py-8">
+  <div class="w-full max-w-lg">
+    <div class="rounded-xl bg-white shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-center mb-6">Inscription Prestataire</h2>
+      <form method="post" enctype="multipart/form-data" class="space-y-5">
+        {% csrf_token %}
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Nom complet</label>
+          <input type="text" class="form-control mt-1" id="name" name="name" required>
         </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" class="form-control mt-1" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">Numéro de téléphone</label>
+          <input type="text" class="form-control mt-1" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="service_type" class="block text-sm font-medium text-gray-700">Type de service</label>
+          <select class="form-select mt-1" id="service_type" name="service_type" required>
+            <option value="">Choisir...</option>
+            <option value="livraison">Livraison</option>
+            <option value="transport">Transport</option>
+            <option value="menage">Ménage</option>
+            <option value="bricolage">Bricolage</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div>
+          <label for="documents" class="block text-sm font-medium text-gray-700">Documents justificatifs</label>
+          <input type="file" class="form-control mt-1" id="documents" name="documents" multiple required>
+        </div>
+        <button type="submit" class="w-full rounded-md bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2.5 transition">S'inscrire comme prestataire</button>
+      </form>
+      <div class="mt-6 text-center text-sm text-gray-600">
+        Déjà un compte ? <a href="{% url 'users:login' %}" class="text-primary-600 hover:underline">Connectez-vous</a>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %} 

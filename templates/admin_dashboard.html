@@ -1,50 +1,42 @@
 {% extends 'base.html' %}
 {% block title %}Tableau de bord Admin - Tog-Services{% endblock %}
 {% block content %}
-<div class="container py-5">
-    <h2 class="mb-4">Tableau de bord Administrateur</h2>
-    <div class="row g-4">
+<div class="container py-6">
+  <h2 class="mb-5 font-bold text-2xl">Tableau de bord Administrateur</h2>
+  <div class="row g-4 mb-5">
         <div class="col-md-3">
-            <div class="card bg-primary text-white">
-                <div class="card-body text-center">
-                    <h3>1,250</h3>
-                    <p>Utilisateurs</p>
-                </div>
+      <div class="card shadow-lg border-0 p-4 text-center bg-primary text-white">
+        <h3 class="font-bold mb-1">1,250</h3>
+        <p class="mb-0">Utilisateurs</p>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card bg-success text-white">
-                <div class="card-body text-center">
-                    <h3>450</h3>
-                    <p>Prestataires</p>
-                </div>
+      <div class="card shadow-lg border-0 p-4 text-center" style="background: #22c55e; color: #fff;">
+        <h3 class="font-bold mb-1">450</h3>
+        <p class="mb-0">Prestataires</p>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card bg-warning text-dark">
-                <div class="card-body text-center">
-                    <h3>2,500</h3>
-                    <p>Commandes</p>
-                </div>
+      <div class="card shadow-lg border-0 p-4 text-center" style="background: #facc15; color: #1e293b;">
+        <h3 class="font-bold mb-1">2,500</h3>
+        <p class="mb-0">Commandes</p>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card bg-info text-white">
-                <div class="card-body text-center">
-                    <h3>15,000</h3>
-                    <p>Revenus (FCFA)</p>
+      <div class="card shadow-lg border-0 p-4 text-center" style="background: #38bdf8; color: #fff;">
+        <h3 class="font-bold mb-1">15,000</h3>
+        <p class="mb-0">Revenus (FCFA)</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row mt-5">
+  <div class="row">
         <div class="col-12">
-            <h4>Actions rapides</h4>
-            <div class="d-flex gap-2">
-                <a href="#" class="btn btn-primary">Gérer les utilisateurs</a>
-                <a href="#" class="btn btn-success">Gérer les prestataires</a>
-                <a href="#" class="btn btn-warning">Voir les commandes</a>
-                <a href="#" class="btn btn-info">Rapports</a>
+      <h4 class="mb-4 font-bold">Actions rapides</h4>
+      <div class="d-flex gap-3 flex-wrap">
+        <a href="#" class="btn btn-primary rounded-md font-semibold px-4 py-2">Gérer les utilisateurs</a>
+        <a href="#" class="btn btn-success rounded-md font-semibold px-4 py-2">Gérer les prestataires</a>
+        <a href="#" class="btn btn-warning rounded-md font-semibold px-4 py-2">Voir les commandes</a>
+        <a href="#" class="btn btn-info rounded-md font-semibold px-4 py-2">Rapports</a>
             </div>
         </div>
     </div>

@@ -1,20 +1,19 @@
 {% extends 'base.html' %}
 {% block title %}Profil Prestataire - Tog-Services{% endblock %}
 {% block content %}
-<div class="container py-5">
-    <h2 class="mb-4">Mon Profil Prestataire</h2>
-    <div class="row">
+<div class="container py-6">
+  <h2 class="mb-5 font-bold text-2xl">Mon Profil Prestataire</h2>
+  <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Informations professionnelles</h5>
+      <div class="card shadow-lg border-0 p-5">
+        <h5 class="card-title font-semibold mb-4">Informations professionnelles</h5>
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <div class="mb-3">
+          <div class="mb-4">
                             <label for="name" class="form-label">Nom complet</label>
                             <input type="text" class="form-control" id="name" name="name" value="Ama D.">
                         </div>
-                        <div class="mb-3">
+          <div class="mb-4">
                             <label for="service_type" class="form-label">Type de service</label>
                             <select class="form-select" id="service_type" name="service_type">
                                 <option value="menage" selected>Ménage</option>
@@ -23,17 +22,16 @@
                                 <option value="bricolage">Bricolage</option>
                             </select>
                         </div>
-                        <div class="mb-3">
+          <div class="mb-4">
                             <label for="description" class="form-label">Description des services</label>
                             <textarea class="form-control" id="description" name="description" rows="3">Nettoyage professionnel de maisons et bureaux</textarea>
                         </div>
-                        <div class="mb-3">
+          <div class="mb-4">
                             <label for="zones" class="form-label">Zones d'intervention</label>
                             <input type="text" class="form-control" id="zones" name="zones" value="Lomé, Agoè, Adidogomé">
                         </div>
-                        <button type="submit" class="btn btn-primary">Sauvegarder</button>
+          <button type="submit" class="btn btn-primary w-100 py-2 font-bold">Sauvegarder</button>
                     </form>
-                </div>
             </div>
         </div>
     </div>
