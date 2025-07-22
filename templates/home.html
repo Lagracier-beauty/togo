@@ -67,72 +67,48 @@
 </section>
 
 <!-- Services Categories -->
-<section class="py-6">
-    <div class="container">
-    <h2 class="text-center mb-5 font-bold">Nos Services</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-        <div class="card h-100 shadow-lg border-0 text-center p-4 hover:shadow-xl transition">
-          <div class="card-body">
-            <i class="fas fa-utensils fa-3x mb-3 text-primary"></i>
-            <h5 class="card-title font-semibold">Livraison de Repas</h5>
-                        <p class="card-text">Commandez vos plats préférés et faites-vous livrer rapidement à domicile.</p>
-            <a href="{% url 'services:services' %}?category=livraison" class="btn btn-outline-primary mt-2">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-        <div class="card h-100 shadow-lg border-0 text-center p-4 hover:shadow-xl transition">
-          <div class="card-body">
-            <i class="fas fa-shopping-cart fa-3x mb-3 text-primary"></i>
-            <h5 class="card-title font-semibold">Courses & Livraison</h5>
-                        <p class="card-text">Faites vos courses sans sortir de chez vous, nous nous chargeons de tout.</p>
-            <a href="{% url 'services:services' %}?category=courses" class="btn btn-outline-primary mt-2">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-        <div class="card h-100 shadow-lg border-0 text-center p-4 hover:shadow-xl transition">
-          <div class="card-body">
-            <i class="fas fa-car fa-3x mb-3 text-primary"></i>
-            <h5 class="card-title font-semibold">Transport</h5>
-                        <p class="card-text">Déplacez-vous en toute sécurité avec nos chauffeurs professionnels.</p>
-            <a href="{% url 'services:services' %}?category=transport" class="btn btn-outline-primary mt-2">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-        <div class="card h-100 shadow-lg border-0 text-center p-4 hover:shadow-xl transition">
-          <div class="card-body">
-            <i class="fas fa-broom fa-3x mb-3 text-primary"></i>
-            <h5 class="card-title font-semibold">Ménage</h5>
-                        <p class="card-text">Confiez le nettoyage de votre maison à nos professionnels qualifiés.</p>
-            <a href="{% url 'services:services' %}?category=menage" class="btn btn-outline-primary mt-2">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-        <div class="card h-100 shadow-lg border-0 text-center p-4 hover:shadow-xl transition">
-          <div class="card-body">
-            <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
-            <h5 class="card-title font-semibold">Bricolage</h5>
-                        <p class="card-text">Petits travaux, réparations, installation... Nos artisans sont là pour vous.</p>
-            <a href="{% url 'services:services' %}?category=bricolage" class="btn btn-outline-primary mt-2">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-        <div class="card h-100 shadow-lg border-0 text-center p-4 hover:shadow-xl transition">
-          <div class="card-body">
-            <i class="fas fa-plus fa-3x mb-3 text-primary"></i>
-            <h5 class="card-title font-semibold">Autres Services</h5>
-                        <p class="card-text">Découvrez tous nos autres services disponibles sur la plateforme.</p>
-            <a href="{% url 'services:services' %}" class="btn btn-outline-primary mt-2">Voir tous les services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="py-12 bg-gray-50">
+  <div class="container">
+    <h2 class="text-center mb-10 text-3xl font-extrabold text-gray-800 tracking-tight">Nos Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="rounded-2xl bg-white shadow-xl hover:shadow-2xl transition p-8 flex flex-col items-center text-center">
+        <i class="fas fa-utensils fa-4x mb-4 text-primary-600"></i>
+        <h5 class="text-xl font-bold mb-2">Livraison de Repas</h5>
+        <p class="text-gray-500 mb-4">Commandez vos plats préférés et faites-vous livrer rapidement à domicile.</p>
+        <a href="{% url 'services:services' %}?category=livraison" class="inline-block mt-auto px-5 py-2 rounded-xl border border-primary-600 text-primary-600 font-semibold hover:bg-primary-600 hover:text-black transition">En savoir plus</a>
+      </div>
+      <div class="rounded-2xl bg-white shadow-xl hover:shadow-2xl transition p-8 flex flex-col items-center text-center">
+        <i class="fas fa-shopping-cart fa-4x mb-4 text-primary-600"></i>
+        <h5 class="text-xl font-bold mb-2">Courses & Livraison</h5>
+        <p class="text-gray-500 mb-4">Faites vos courses sans sortir de chez vous, nous nous chargeons de tout.</p>
+        <a href="{% url 'services:services' %}?category=courses" class="inline-block mt-auto px-5 py-2 rounded-xl border border-primary-600 text-primary-600 font-semibold hover:bg-primary-600 hover:text-black transition">En savoir plus</a>
+      </div>
+      <div class="rounded-2xl bg-white shadow-xl hover:shadow-2xl transition p-8 flex flex-col items-center text-center">
+        <i class="fas fa-car fa-4x mb-4 text-primary-600"></i>
+        <h5 class="text-xl font-bold mb-2">Transport</h5>
+        <p class="text-gray-500 mb-4">Déplacez-vous en toute sécurité avec nos chauffeurs professionnels.</p>
+        <a href="{% url 'services:services' %}?category=transport" class="inline-block mt-auto px-5 py-2 rounded-xl border border-primary-600 text-primary-600 font-semibold hover:bg-primary-600 hover:text-black transition">En savoir plus</a>
+      </div>
+      <div class="rounded-2xl bg-white shadow-xl hover:shadow-2xl transition p-8 flex flex-col items-center text-center">
+        <i class="fas fa-broom fa-4x mb-4 text-primary-600"></i>
+        <h5 class="text-xl font-bold mb-2">Ménage</h5>
+        <p class="text-gray-500 mb-4">Confiez le nettoyage de votre maison à nos professionnels qualifiés.</p>
+        <a href="{% url 'services:services' %}?category=menage" class="inline-block mt-auto px-5 py-2 rounded-xl border border-primary-600 text-primary-600 font-semibold hover:bg-primary-600 hover:text-black transition">En savoir plus</a>
+      </div>
+      <div class="rounded-2xl bg-white shadow-xl hover:shadow-2xl transition p-8 flex flex-col items-center text-center">
+        <i class="fas fa-tools fa-4x mb-4 text-primary-600"></i>
+        <h5 class="text-xl font-bold mb-2">Bricolage</h5>
+        <p class="text-gray-500 mb-4">Petits travaux, réparations, installation... Nos artisans sont là pour vous.</p>
+        <a href="{% url 'services:services' %}?category=bricolage" class="inline-block mt-auto px-5 py-2 rounded-xl border border-primary-600 text-primary-600 font-semibold hover:bg-primary-600 hover:text-black transition">En savoir plus</a>
+      </div>
+      <div class="rounded-2xl bg-white shadow-xl hover:shadow-2xl transition p-8 flex flex-col items-center text-center">
+        <i class="fas fa-plus fa-4x mb-4 text-primary-600"></i>
+        <h5 class="text-xl font-bold mb-2">Autres Services</h5>
+        <p class="text-gray-500 mb-4">Découvrez tous nos autres services disponibles sur la plateforme.</p>
+        <a href="{% url 'services:services' %}" class="inline-block mt-auto px-5 py-2 rounded-xl border border-primary-600 text-primary-600 font-semibold hover:bg-primary-600 hover:text-black transition">Voir tous les services</a>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- How it works -->

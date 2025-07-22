@@ -5,23 +5,23 @@
   <div class="w-full max-w-md">
     <div class="bg-white/90 shadow-2xl rounded-3xl px-8 py-12 border border-primary-100">
       <h2 class="text-4xl font-extrabold text-center text-primary mb-10 tracking-tight drop-shadow">Connexion</h2>
-      <form method="post" class="space-y-7">
+      <form method="post" class="space-y-7 flex flex-col items-center">
         {% csrf_token %}
-        <div class="relative">
+        <div class="relative w-full max-w-xs">
           <input type="text" id="username" name="username" class="form-control block w-full px-5 py-4 text-lg bg-transparent border-2 border-primary-200 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary/30 transition placeholder-transparent peer shadow-sm" placeholder="Email ou Nom d'utilisateur" value="{{ request.POST.username|default:'' }}" required>
-          <label for="username" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Email ou Nom d'utilisateur</label>
+          <label for="username" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Email </label>
           <span class="absolute right-5 top-4 text-primary-400 text-xl"><i class="fa fa-user-circle"></i></span>
           {% if errors.general %}<p class="mt-2 text-sm text-red-600">{{ errors.general }}</p>{% endif %}
         </div>
-        <div class="relative">
+        <div class="relative w-full max-w-xs">
           <input type="password" id="password" name="password" class="form-control block w-full px-5 py-4 text-lg bg-transparent border-2 border-primary-200 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary/30 transition placeholder-transparent peer shadow-sm" placeholder="Mot de passe" required>
           <label for="password" class="absolute left-5 top-4 text-gray-500 text-base transition-all duration-200 pointer-events-none peer-focus:-top-5 peer-focus:text-sm peer-focus:text-primary peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 bg-white px-1">Mot de passe</label>
           <span class="absolute right-5 top-4 text-primary-400 text-xl"><i class="fa fa-lock"></i></span>
         </div>
-        <div class="flex justify-end">
+        <div class="flex justify-end w-full max-w-xs">
           <a href="#" class="text-sm text-primary-600 hover:underline">Mot de passe oublié ?</a>
         </div>
-        <button type="submit" class="w-full py-4 rounded-2xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-lg shadow-lg transition">Se connecter</button>
+        <button type="submit" class="w-full max-w-xs py-4 rounded-2xl bg-primary-600 hover:bg-primary-700 text-blue-500 font-bold text-lg shadow-lg transition shadow-lg">Se connecter</button>
       </form>
       <div class="mt-10 text-center text-gray-600 text-base">
         Pas encore de compte ? <a href="{% url 'users:register' %}" class="text-primary-600 font-semibold hover:underline">Inscrivez-vous</a>
