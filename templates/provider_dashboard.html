@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+
+{% block title %}Tableau de bord Prestataire - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Dashboard Header -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="scroll-animate">
+            <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">
+                Espace Prestataire
+            </h1>
+            <p class="text-muted">
+                Gérez vos prestations, vos revenus et votre profil professionnel.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Provider Stats -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="grid grid-4 scroll-animate">
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--primary);">
+                    28
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    Prestations totales
+                </p>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--success); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--success);">
+                    125 000
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    FCFA gagnés
+                </p>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--warning); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--warning);">
+                    3
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    En cours
+                </p>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--secondary); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <polygon points="12,2 15.09,8.26 22,9 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9 8.91,8.26"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--secondary);">
+                    4.7
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    Note moyenne
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Dashboard Content -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 300px; gap: 2rem; align-items: start;">
+            
+            <!-- Recent Orders -->
+            <div class="scroll-animate">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="font-size: 1.25rem; font-weight: 600;">
+                        Prestations récentes
+                    </h2>
+                    <a href="{% url 'providers:provider_orders' %}" class="btn btn-secondary btn-sm">
+                        Voir tout
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border);">
+                                    <th style="text-align: left; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Service</th>
+                                    <th style="text-align: left; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Date</th>
+                                    <th style="text-align: left; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Statut</th>
+                                    <th style="text-align: center; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--border);">
+                                    <td style="padding: 1rem 0;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
+                                                JD
+                                            </div>
+                                            <div>
+                                                <div style="font-weight: 500; font-size: 0.875rem;">Ménage bureau</div>
+                                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Jean Dupont</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 1rem 0; color: var(--muted-foreground); font-size: 0.875rem;">
+                                        02/07/2024
+                                    </td>
+                                    <td style="padding: 1rem 0;">
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                                            Terminé
+                                        </span>
+                                    </td>
+                                    <td style="padding: 1rem 0; text-align: center;">
+                                        <button class="btn btn-ghost btn-sm">
+                                            Détails
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                                <tr style="border-bottom: 1px solid var(--border);">
+                                    <td style="padding: 1rem 0;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
+                                                MS
+                                            </div>
+                                            <div>
+                                                <div style="font-weight: 500; font-size: 0.875rem;">Bricolage plomberie</div>
+                                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Marie Smith</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 1rem 0; color: var(--muted-foreground); font-size: 0.875rem;">
+                                        30/06/2024
+                                    </td>
+                                    <td style="padding: 1rem 0;">
+                                        <span style="background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                                            En cours
+                                        </span>
+                                    </td>
+                                    <td style="padding: 1rem 0; text-align: center;">
+                                        <button class="btn btn-primary btn-sm">
+                                            Continuer
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td style="padding: 1rem 0;">
+                                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                            <div style="width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
+                                                PK
+                                            </div>
+                                            <div>
+                                                <div style="font-weight: 500; font-size: 0.875rem;">Livraison colis</div>
+                                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Paul Kim</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 1rem 0; color: var(--muted-foreground); font-size: 0.875rem;">
+                                        28/06/2024
+                                    </td>
+                                    <td style="padding: 1rem 0;">
+                                        <span style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                                            Terminé
+                                        </span>
+                                    </td>
+                                    <td style="padding: 1rem 0; text-align: center;">
+                                        <button class="btn btn-ghost btn-sm">
+                                            Facture
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Actions Sidebar -->
+            <div class="scroll-animate">
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">
+                    Actions rapides
+                </h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <div style="width: 32px; height: 32px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Mon Profil</h4>
+                                <p style="color: var(--muted-foreground); font-size: 0.8125rem;">Gérer mes informations</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'providers:provider_profile' %}" class="btn btn-secondary btn-sm" style="width: 100%;">
+                            Modifier
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <div style="width: 32px; height: 32px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Mes Gains</h4>
+                                <p style="color: var(--muted-foreground); font-size: 0.8125rem;">Revenus et paiements</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" style="width: 100%;">
+                            Voir détails
+                        </button>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Disponibilité</h4>
+                                <p style="color: var(--muted-foreground); font-size: 0.8125rem;">Gérer mon planning</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" style="width: 100%;">
+                            Configurer
+                        </button>
+                    </div>
+                    
+                    <div class="card" style="border: 1px solid var(--success); background: rgba(16, 185, 129, 0.05);">
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="width: 40px; height: 40px; background: var(--success); border-radius: 50%; margin: 0 auto 0.75rem; display: flex; align-items: center; justify-content: center;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                                </svg>
+                            </div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem; color: var(--success);">
+                                Status: Actif
+                            </h4>
+                            <p style="color: var(--muted-foreground); font-size: 0.8125rem; margin-bottom: 1rem;">
+                                Votre profil est vérifié et actif
+                            </p>
+                        </div>
+                        <button class="btn btn-success btn-sm" style="width: 100%; background: var(--success); color: white;">
+                            Prêt à travailler
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

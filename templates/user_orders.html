@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+
+{% block title %}Mes Commandes - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Orders Header -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="scroll-animate">
+            <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">
+                Mes Commandes
+            </h1>
+            <p class="text-muted">
+                Suivez toutes vos commandes et consultez l'historique de vos services.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Filter and Stats -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--space-8);">
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;" class="scroll-animate">
+            <div style="display: flex; gap: 0.75rem;">
+                <select class="form-input" style="width: auto; margin-bottom: 0;">
+                    <option>Toutes les commandes</option>
+                    <option>En cours</option>
+                    <option>Terminées</option>
+                    <option>Annulées</option>
+                </select>
+                
+                <select class="form-input" style="width: auto; margin-bottom: 0;">
+                    <option>Tous les services</option>
+                    <option>Livraison</option>
+                    <option>Transport</option>
+                    <option>Ménage</option>
+                    <option>Bricolage</option>
+                </select>
+            </div>
+            
+            <div style="display: flex; gap: 0.75rem;">
+                <button class="btn btn-secondary btn-sm">
+                    Exporter
+                </button>
+                <a href="{% url 'services:services' %}" class="btn btn-primary btn-sm">
+                    Nouvelle commande
+                </a>
+            </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="grid grid-4 scroll-animate" style="margin-bottom: 2rem;">
+            <div class="card" style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">
+                    12
+                </div>
+                <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    Total
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--success); margin-bottom: 0.25rem;">
+                    10
+                </div>
+                <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    Terminées
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--warning); margin-bottom: 0.25rem;">
+                    2
+                </div>
+                <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    En cours
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">
+                    32 500
+                </div>
+                <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    FCFA dépensés
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Orders List -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="scroll-animate">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                
+                <!-- Order Card 1 -->
+                <div class="card">
+                    <div style="display: grid; grid-template-columns: auto 1fr auto auto; gap: 1rem; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 48px; height: 48px; background: var(--primary); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
+                                KA
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.25rem;">#001</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">03/07/2024 à 14:30</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="font-weight: 500; margin-bottom: 0.25rem;">Livraison de repas</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">Kossi A. • Restaurant Chez Marie</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.8125rem; margin-top: 0.25rem;">
+                                De: Restaurant → Vers: Bureau Agoè
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem;">
+                                Terminé
+                            </div>
+                            <div style="font-weight: 600;">2 500 FCFA</div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-ghost btn-sm">
+                                Détails
+                            </button>
+                            <button class="btn btn-secondary btn-sm">
+                                Noter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Card 2 -->
+                <div class="card" style="border-color: var(--warning);">
+                    <div style="display: grid; grid-template-columns: auto 1fr auto auto; gap: 1rem; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 48px; height: 48px; background: var(--secondary); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
+                                YK
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.25rem;">#002</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">01/07/2024 à 16:45</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="font-weight: 500; margin-bottom: 0.25rem;">Transport</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">Yawovi K. • Moto-taxi</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.8125rem; margin-top: 0.25rem;">
+                                De: Maison → Vers: Marché d'Agoè
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem;">
+                                En cours
+                            </div>
+                            <div style="font-weight: 600;">1 500 FCFA</div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-primary btn-sm">
+                                Suivre
+                            </button>
+                            <button class="btn btn-ghost btn-sm">
+                                Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Card 3 -->
+                <div class="card">
+                    <div style="display: grid; grid-template-columns: auto 1fr auto auto; gap: 1rem; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 48px; height: 48px; background: var(--accent); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
+                                AD
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.25rem;">#003</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">29/06/2024 à 09:00</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="font-weight: 500; margin-bottom: 0.25rem;">Ménage domicile</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">Ama D. • Nettoyage complet</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.8125rem; margin-top: 0.25rem;">
+                                Appartement 3 pièces • 4h de service
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem;">
+                                Terminé
+                            </div>
+                            <div style="font-weight: 600;">12 000 FCFA</div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-ghost btn-sm">
+                                Facture
+                            </button>
+                            <button class="btn btn-primary btn-sm">
+                                Recommander
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Card 4 -->
+                <div class="card">
+                    <div style="display: grid; grid-template-columns: auto 1fr auto auto; gap: 1rem; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 48px; height: 48px; background: var(--success); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">
+                                SK
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; margin-bottom: 0.25rem;">#004</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">25/06/2024 à 10:30</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div style="font-weight: 500; margin-bottom: 0.25rem;">Réparation plomberie</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">Sénam K. • Artisan plombier</div>
+                            <div style="color: var(--muted-foreground); font-size: 0.8125rem; margin-top: 0.25rem;">
+                                Réparation fuite + changement robinet
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <div style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem;">
+                                Terminé
+                            </div>
+                            <div style="font-weight: 600;">8 500 FCFA</div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-ghost btn-sm">
+                                Détails
+                            </button>
+                            <div style="display: flex; align-items: center; gap: 0.25rem; color: var(--warning);">
+                                <span style="font-size: 0.8125rem;">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-secondary">
+                    Charger plus de commandes
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

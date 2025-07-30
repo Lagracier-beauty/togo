@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block title %}Résultats de recherche - Tog-Services{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <!-- Search Results Header -->
+        <div style="margin-bottom: 2rem;" class="scroll-animate">
+            <h1 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Résultats de recherche
+            </h1>
+            <p class="text-muted">
+                {% if providers %}
+                    {{ providers|length }} prestataires trouvés pour votre recherche
+                {% else %}
+                    Aucun résultat trouvé pour votre recherche
+                {% endif %}
+            </p>
+        </div>
+
+        {% if providers %}
+            <!-- Results Grid -->
+            <div class="grid grid-3">
+                {% for provider in providers %}
+                <div class="card scroll-animate">
+                    <div style="position: relative; margin-bottom: 1rem;">
+                        {% if provider.image %}
+                            <img 
+                                src="{{ provider.image }}" 
+                                alt="{{ provider.name }}" 
+                                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
+                            >
+                        {% else %}
+                            <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
+                                {{ provider.name|slice:":2"|upper }}
+                            </div>
+                        {% endif %}
+                        
+                        {% if provider.available %}
+                            <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                        {% else %}
+                            <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--warning); border: 2px solid var(--background); border-radius: 50%;"></div>
+                        {% endif %}
+                    </div>
+                    
+                    <div style="text-align: center; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                            {{ provider.name }}
+                        </h3>
+                        
+                        <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                            {{ provider.service }}
+                        </p>
+                        
+                        {% if provider.available %}
+                            <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                                Disponible
+                            </div>
+                        {% else %}
+                            <div style="display: inline-flex; align-items: center; background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                                Occupé
+                            </div>
+                        {% endif %}
+                        
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                            <div style="color: var(--warning);">
+                                {% for i in "12345" %}
+                                    {% if forloop.counter <= provider.rating|floatformat:0 %}★{% else %}☆{% endif %}
+                                {% endfor %}
+                            </div>
+                            <span style="font-weight: 500; margin-left: 0.25rem;">{{ provider.rating }}</span>
+                            <span style="color: var(--muted-foreground); font-size: 0.875rem;">({{ provider.reviews }} avis)</span>
+                        </div>
+                        
+                        {% if provider.location %}
+                            <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                {{ provider.location }}
+                            </p>
+                        {% endif %}
+                    </div>
+                    
+                    <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                        {% if provider.price %}
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
+                                <span style="font-weight: 600; color: var(--foreground);">{{ provider.price }} FCFA</span>
+                            </div>
+                        {% endif %}
+                        
+                        {% if provider.available %}
+                            <button class="btn btn-primary btn-sm" style="width: 100%;">
+                                Voir le profil
+                            </button>
+                        {% else %}
+                            <button class="btn btn-secondary btn-sm" style="width: 100%;" disabled>
+                                Indisponible
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Load More -->
+            {% if providers|length >= 12 %}
+                <div style="text-align: center; margin-top: 3rem;" class="scroll-animate">
+                    <button class="btn btn-secondary btn-lg">
+                        Charger plus de résultats
+                    </button>
+                </div>
+            {% endif %}
+            
+        {% else %}
+            <!-- No Results -->
+            <div class="scroll-animate" style="text-align: center; max-width: 500px; margin: 3rem auto;">
+                <div style="width: 80px; height: 80px; background: var(--muted); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--muted-foreground)" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                        <path d="M11 15a4 4 0 004-4"/>
+                    </svg>
+                </div>
+                
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem;">
+                    Aucun résultat trouvé
+                </h2>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 2rem;">
+                    Nous n'avons trouvé aucun prestataire correspondant à votre recherche. 
+                    Essayez de modifier vos critères ou élargir votre zone de recherche.
+                </p>
+                
+                <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="{% url 'services:services' %}" class="btn btn-primary">
+                        Voir tous les services
+                    </a>
+                    <button class="btn btn-secondary" onclick="history.back()">
+                        Retour
+                    </button>
+                </div>
+                
+                <!-- Search Suggestions -->
+                <div style="margin-top: 2rem; text-align: left;">
+                    <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 1rem; text-align: center;">
+                        Suggestions de recherche
+                    </h3>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                        <a href="?q=livraison" class="btn btn-sm" style="background: var(--muted); color: var(--foreground);">
+                            Livraison
+                        </a>
+                        <a href="?q=ménage" class="btn btn-sm" style="background: var(--muted); color: var(--foreground);">
+                            Ménage
+                        </a>
+                        <a href="?q=transport" class="btn btn-sm" style="background: var(--muted); color: var(--foreground);">
+                            Transport
+                        </a>
+                        <a href="?q=bricolage" class="btn btn-sm" style="background: var(--muted); color: var(--foreground);">
+                            Bricolage
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %} 

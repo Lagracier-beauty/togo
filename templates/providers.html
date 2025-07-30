@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+
+{% block title %}Prestataires - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Providers Hero -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-10);">
+    <div class="container">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;" class="scroll-animate">
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+                Nos prestataires
+            </h1>
+            <p class="text-muted" style="font-size: 1.125rem; margin-bottom: 2rem;">
+                Découvrez des professionnels qualifiés et vérifiés prêts à répondre à vos besoins
+            </p>
+            
+            <!-- Search and Filters -->
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <div style="flex: 1;">
+                    <input 
+                        type="search" 
+                        class="form-input" 
+                        placeholder="Rechercher un prestataire..."
+                        style="margin-bottom: 0;"
+                    >
+                </div>
+                <select class="form-input" style="width: auto; margin-bottom: 0;">
+                    <option>Tous les services</option>
+                    <option>Livraison</option>
+                    <option>Transport</option>
+                    <option>Ménage</option>
+                    <option>Bricolage</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Providers Grid -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="grid grid-3">
+            <!-- Provider 1 -->
+            <div class="card scroll-animate" style="text-align: center;">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <img 
+                        src="https://randomuser.me/api/portraits/men/32.jpg" 
+                        alt="Kossi A." 
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto;"
+                    >
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Kossi A.
+                </h3>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                    Livraison de repas
+                </p>
+                
+                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                    Disponible
+                </div>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                    <div style="color: var(--warning);">★★★★★</div>
+                    <span style="font-weight: 500; margin-left: 0.25rem;">4.8</span>
+                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(120 avis)</span>
+                </div>
+                
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Lomé, Agoè
+                </p>
+                
+                <button class="btn btn-primary btn-sm" style="width: 100%;">
+                    Voir le profil
+                </button>
+            </div>
+            
+            <!-- Provider 2 -->
+            <div class="card scroll-animate" style="text-align: center;">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <img 
+                        src="https://randomuser.me/api/portraits/women/44.jpg" 
+                        alt="Ama D." 
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto;"
+                    >
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Ama D.
+                </h3>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                    Ménage
+                </p>
+                
+                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                    Disponible
+                </div>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                    <div style="color: var(--warning);">★★★★★</div>
+                    <span style="font-weight: 500; margin-left: 0.25rem;">4.9</span>
+                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(98 avis)</span>
+                </div>
+                
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Lomé, Adidogomé
+                </p>
+                
+                <button class="btn btn-primary btn-sm" style="width: 100%;">
+                    Voir le profil
+                </button>
+            </div>
+            
+            <!-- Provider 3 -->
+            <div class="card scroll-animate" style="text-align: center;">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <img 
+                        src="https://randomuser.me/api/portraits/men/54.jpg" 
+                        alt="Yawovi K." 
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto;"
+                    >
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--warning); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Yawovi K.
+                </h3>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                    Transport
+                </p>
+                
+                <div style="display: inline-flex; align-items: center; background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                    Occupé
+                </div>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                    <div style="color: var(--warning);">★★★★☆</div>
+                    <span style="font-weight: 500; margin-left: 0.25rem;">4.7</span>
+                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(75 avis)</span>
+                </div>
+                
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Lomé, Bè
+                </p>
+                
+                <button class="btn btn-secondary btn-sm" style="width: 100%;" disabled>
+                    Occupé
+                </button>
+            </div>
+            
+            <!-- Provider 4 -->
+            <div class="card scroll-animate" style="text-align: center;">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
+                        SK
+                    </div>
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Sénam K.
+                </h3>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                    Bricolage
+                </p>
+                
+                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                    Disponible
+                </div>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                    <div style="color: var(--warning);">★★★★★</div>
+                    <span style="font-weight: 500; margin-left: 0.25rem;">4.6</span>
+                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(89 avis)</span>
+                </div>
+                
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Lomé, Nyékonakpoè
+                </p>
+                
+                <button class="btn btn-primary btn-sm" style="width: 100%;">
+                    Voir le profil
+                </button>
+            </div>
+            
+            <!-- Provider 5 -->
+            <div class="card scroll-animate" style="text-align: center;">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <div style="width: 80px; height: 80px; background: var(--secondary); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
+                        AL
+                    </div>
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Akosua L.
+                </h3>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                    Livraison courses
+                </p>
+                
+                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                    Disponible
+                </div>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                    <div style="color: var(--warning);">★★★★★</div>
+                    <span style="font-weight: 500; margin-left: 0.25rem;">4.9</span>
+                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(156 avis)</span>
+                </div>
+                
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Lomé, Tokoin
+                </p>
+                
+                <button class="btn btn-primary btn-sm" style="width: 100%;">
+                    Voir le profil
+                </button>
+            </div>
+            
+            <!-- Provider 6 -->
+            <div class="card scroll-animate" style="text-align: center;">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
+                        KE
+                    </div>
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Kodjo E.
+                </h3>
+                
+                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                    Plomberie
+                </p>
+                
+                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                    Disponible
+                </div>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                    <div style="color: var(--warning);">★★★★☆</div>
+                    <span style="font-weight: 500; margin-left: 0.25rem;">4.5</span>
+                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(43 avis)</span>
+                </div>
+                
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
+                    Lomé, Doulassamé
+                </p>
+                
+                <button class="btn btn-primary btn-sm" style="width: 100%;">
+                    Voir le profil
+                </button>
+            </div>
+        </div>
+        
+        <!-- Load More -->
+        <div style="text-align: center; margin-top: 3rem;" class="scroll-animate">
+            <button class="btn btn-secondary btn-lg">
+                Voir plus de prestataires
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section" style="background: var(--muted);">
+    <div class="container" style="text-align: center;">
+        <div class="scroll-animate">
+            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">
+                Vous êtes un professionnel ?
+            </h2>
+            <p style="color: var(--muted-foreground); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                Rejoignez notre réseau de prestataires qualifiés et développez votre activité avec Tog-Services
+            </p>
+            <a href="{% url 'providers:provider_register' %}" class="btn btn-primary btn-lg">
+                Devenir prestataire
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %} 

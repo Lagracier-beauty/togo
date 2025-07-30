@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+
+{% block title %}Inscription Prestataire - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Provider Registration Section -->
+<section class="section">
+    <div class="container-sm">
+        <div style="max-width: 500px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 2rem;" class="scroll-animate">
+                <h1 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">
+                    Devenir prestataire
+                </h1>
+                <p class="text-muted">
+                    Rejoignez notre réseau de professionnels et développez votre activité
+                </p>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="card scroll-animate">
+                <form method="post" enctype="multipart/form-data" style="all: unset; display: block;">
+                    {% csrf_token %}
+                    
+                    <!-- Personal Information -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem; color: var(--foreground);">
+                            Informations personnelles
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Nom complet *
+                            </label>
+                            <input 
+                                type="text" 
+                                class="form-input" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Votre nom complet"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Adresse email *
+                            </label>
+                            <input 
+                                type="email" 
+                                class="form-input" 
+                                id="email" 
+                                name="email" 
+                                placeholder="email@exemple.com"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Numéro de téléphone *
+                            </label>
+                            <input 
+                                type="tel" 
+                                class="form-input" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="+228 XX XX XX XX"
+                                required
+                            >
+                        </div>
+                    </div>
+                    
+                    <!-- Service Information -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem; color: var(--foreground);">
+                            Informations professionnelles
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="service_type" class="form-label">
+                                Type de service principal *
+                            </label>
+                            <select class="form-input" id="service_type" name="service_type" required>
+                                <option value="">Sélectionnez votre spécialité</option>
+                                <option value="livraison">Livraison & Course</option>
+                                <option value="transport">Transport (Moto/VTC)</option>
+                                <option value="menage">Ménage & Nettoyage</option>
+                                <option value="bricolage">Bricolage & Réparations</option>
+                                <option value="jardinage">Jardinage</option>
+                                <option value="cuisine">Cuisine & Traiteur</option>
+                                <option value="autre">Autre service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience" class="form-label">
+                                Expérience professionnelle
+                            </label>
+                            <textarea 
+                                class="form-input form-textarea" 
+                                id="experience" 
+                                name="experience" 
+                                placeholder="Décrivez brièvement votre expérience et vos compétences..."
+                                rows="3"
+                            ></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zone" class="form-label">
+                                Zone d'intervention *
+                            </label>
+                            <input 
+                                type="text" 
+                                class="form-input" 
+                                id="zone" 
+                                name="zone" 
+                                placeholder="Ex: Lomé, Agoè, Adidogomé..."
+                                required
+                            >
+                        </div>
+                    </div>
+                    
+                    <!-- Documents -->
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem; color: var(--foreground);">
+                            Documents justificatifs
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="documents" class="form-label">
+                                Pièces d'identité et certificats *
+                            </label>
+                            <input 
+                                type="file" 
+                                class="form-input" 
+                                id="documents" 
+                                name="documents" 
+                                multiple 
+                                accept=".pdf,.jpg,.jpeg,.png"
+                                required
+                            >
+                            <div style="font-size: 0.8125rem; color: var(--muted-foreground); margin-top: 0.25rem;">
+                                CNI, permis de conduire, certificats professionnels (formats: PDF, JPG, PNG)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Terms & Conditions -->
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer; font-size: 0.875rem; line-height: 1.4;">
+                            <input type="checkbox" required style="margin-top: 0.125rem;">
+                            <span style="color: var(--muted-foreground);">
+                                J'accepte les 
+                                <a href="#" style="color: var(--primary); text-decoration: none;">conditions d'utilisation</a>
+                                et je certifie que les informations fournies sont exactes. Je comprends que mon compte sera soumis à validation avant activation.
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Soumettre ma candidature
+                    </button>
+                </form>
+                
+                <!-- Info Box -->
+                <div style="background: var(--muted); border-radius: var(--radius); padding: 1rem; margin-top: 1.5rem; border-left: 4px solid var(--primary);">
+                    <h4 style="font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--foreground);">
+                        Processus de validation
+                    </h4>
+                    <p style="font-size: 0.8125rem; color: var(--muted-foreground); margin-bottom: 0.5rem;">
+                        Votre candidature sera examinée sous 48h. Vous recevrez un email de confirmation une fois votre profil validé.
+                    </p>
+                    <p style="font-size: 0.8125rem; color: var(--muted-foreground); margin: 0;">
+                        Déjà prestataire ? 
+                        <a href="{% url 'users:login' %}" style="color: var(--primary); text-decoration: none; font-weight: 500;">
+                            Connectez-vous
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

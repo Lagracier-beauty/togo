@@ -1,0 +1,424 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard Administrateur - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Admin Header -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="scroll-animate">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        Dashboard Administrateur
+                    </h1>
+                    <p class="text-muted">
+                        Vue d'ensemble de la plateforme Tog-Services • Dernière mise à jour: il y a 2 minutes
+                    </p>
+                </div>
+                
+                <div style="display: flex; gap: 0.75rem;">
+                    <button class="btn btn-secondary btn-sm">
+                        Exporter données
+                    </button>
+                    <button class="btn btn-primary btn-sm">
+                        Nouveau rapport
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Metrics -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="grid grid-4 scroll-animate">
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--primary);">
+                    1,250
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                    Utilisateurs actifs
+                </p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; color: var(--success); font-size: 0.8125rem;">
+                    <span>↗</span>
+                    <span>+12% ce mois</span>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--success); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--success);">
+                    450
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                    Prestataires vérifiés
+                </p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; color: var(--success); font-size: 0.8125rem;">
+                    <span>↗</span>
+                    <span>+8% ce mois</span>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--warning); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--warning);">
+                    2,500
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                    Commandes totales
+                </p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; color: var(--success); font-size: 0.8125rem;">
+                    <span>↗</span>
+                    <span>+23% ce mois</span>
+                </div>
+            </div>
+            
+            <div class="card" style="text-align: center;">
+                <div style="width: 48px; height: 48px; background: var(--secondary); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--secondary);">
+                    2.5M
+                </h3>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                    Revenus FCFA
+                </p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; color: var(--success); font-size: 0.8125rem;">
+                    <span>↗</span>
+                    <span>+18% ce mois</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Dashboard Content -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+            
+            <!-- Recent Activity & Management -->
+            <div>
+                <!-- Recent Activity -->
+                <div class="scroll-animate" style="margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h2 style="font-size: 1.25rem; font-weight: 600;">
+                            Activité récente
+                        </h2>
+                        <select class="form-input" style="width: auto; margin-bottom: 0;">
+                            <option>Dernières 24h</option>
+                            <option>Cette semaine</option>
+                            <option>Ce mois</option>
+                        </select>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <th style="text-align: left; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Utilisateur</th>
+                                        <th style="text-align: left; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Action</th>
+                                        <th style="text-align: left; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Date</th>
+                                        <th style="text-align: center; padding: 0.75rem 0; font-weight: 600; color: var(--foreground);">Statut</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <td style="padding: 1rem 0;">
+                                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                <div style="width: 32px; height: 32px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
+                                                    KA
+                                                </div>
+                                                <div>
+                                                    <div style="font-weight: 500; font-size: 0.875rem;">Kossi A.</div>
+                                                    <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Prestataire</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="padding: 1rem 0; font-size: 0.875rem;">
+                                            Nouvelle inscription
+                                        </td>
+                                        <td style="padding: 1rem 0; color: var(--muted-foreground); font-size: 0.875rem;">
+                                            Il y a 2h
+                                        </td>
+                                        <td style="padding: 1rem 0; text-align: center;">
+                                            <span style="background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                                                En attente
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <td style="padding: 1rem 0;">
+                                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                <div style="width: 32px; height: 32px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
+                                                    MD
+                                                </div>
+                                                <div>
+                                                    <div style="font-weight: 500; font-size: 0.875rem;">Marie Dupont</div>
+                                                    <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Client</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="padding: 1rem 0; font-size: 0.875rem;">
+                                            Commande #2501 terminée
+                                        </td>
+                                        <td style="padding: 1rem 0; color: var(--muted-foreground); font-size: 0.875rem;">
+                                            Il y a 3h
+                                        </td>
+                                        <td style="padding: 1rem 0; text-align: center;">
+                                            <span style="background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                                                Terminé
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr style="border-bottom: 1px solid var(--border);">
+                                        <td style="padding: 1rem 0;">
+                                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                                <div style="width: 32px; height: 32px; background: var(--error); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
+                                                    ⚠
+                                                </div>
+                                                <div>
+                                                    <div style="font-weight: 500; font-size: 0.875rem;">Système</div>
+                                                    <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Alerte</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="padding: 1rem 0; font-size: 0.875rem;">
+                                            Litige signalé #2498
+                                        </td>
+                                        <td style="padding: 1rem 0; color: var(--muted-foreground); font-size: 0.875rem;">
+                                            Il y a 5h
+                                        </td>
+                                        <td style="padding: 1rem 0; text-align: center;">
+                                            <span style="background: rgba(239, 68, 68, 0.1); color: var(--error); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500;">
+                                                Urgent
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Platform Stats -->
+                <div class="scroll-animate">
+                    <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                        Statistiques de la plateforme
+                    </h2>
+                    
+                    <div class="grid grid-3">
+                        <div class="card" style="text-align: center;">
+                            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                Taux de satisfaction
+                            </h3>
+                            <div style="font-size: 2rem; font-weight: 700; color: var(--success); margin-bottom: 0.25rem;">
+                                94%
+                            </div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                Moyenne globale
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="text-align: center;">
+                            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                Temps de réponse
+                            </h3>
+                            <div style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">
+                                8min
+                            </div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                Temps moyen
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="text-align: center;">
+                            <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                                Commission
+                            </h3>
+                            <div style="font-size: 2rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.25rem;">
+                                250K
+                            </div>
+                            <div style="color: var(--muted-foreground); font-size: 0.875rem;">
+                                FCFA ce mois
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar Actions & Monitoring -->
+            <div>
+                <!-- Quick Actions -->
+                <div class="scroll-animate" style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">
+                        Actions rapides
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="card">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="width: 32px; height: 32px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Gérer les utilisateurs</h4>
+                                    <p style="color: var(--muted-foreground); font-size: 0.8125rem;">1,250 utilisateurs actifs</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" style="width: 100%;">
+                                Accéder
+                            </button>
+                        </div>
+                        
+                        <div class="card">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="width: 32px; height: 32px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                        <line x1="8" y1="21" x2="16" y2="21"/>
+                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Valider prestataires</h4>
+                                    <p style="color: var(--muted-foreground); font-size: 0.8125rem;">12 en attente</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning btn-sm" style="width: 100%; background: var(--warning); color: white;">
+                                Traiter (12)
+                            </button>
+                        </div>
+                        
+                        <div class="card">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Commandes</h4>
+                                    <p style="color: var(--muted-foreground); font-size: 0.8125rem;">25 en cours</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" style="width: 100%;">
+                                Monitorer
+                            </button>
+                        </div>
+                        
+                        <div class="card">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="width: 32px; height: 32px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <path d="M3 3v5h5"/>
+                                        <path d="M3 8s1.5-2.5 5-2.5 5 2.5 5 2.5"/>
+                                        <path d="M21 21v-5h-5"/>
+                                        <path d="M21 16s-1.5 2.5-5 2.5-5-2.5-5-2.5"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.25rem;">Rapports financiers</h4>
+                                    <p style="color: var(--muted-foreground); font-size: 0.8125rem;">Générer rapport</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-sm" style="width: 100%;">
+                                Générer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- System Status -->
+                <div class="scroll-animate">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">
+                        État du système
+                    </h3>
+                    
+                    <div class="card">
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.875rem;">Serveur API</span>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></div>
+                                    <span style="font-size: 0.8125rem; color: var(--success);">Opérationnel</span>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.875rem;">Base de données</span>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></div>
+                                    <span style="font-size: 0.8125rem; color: var(--success);">Opérationnel</span>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.875rem;">Paiements</span>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 8px; height: 8px; background: var(--warning); border-radius: 50%;"></div>
+                                    <span style="font-size: 0.8125rem; color: var(--warning);">Maintenance</span>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.875rem;">Notifications</span>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></div>
+                                    <span style="font-size: 0.8125rem; color: var(--success);">Opérationnel</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); text-align: center;">
+                            <div style="font-size: 0.8125rem; color: var(--muted-foreground); margin-bottom: 0.25rem;">
+                                Uptime
+                            </div>
+                            <div style="font-weight: 600; color: var(--success);">
+                                99.8%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

@@ -1,0 +1,320 @@
+{% extends 'base.html' %}
+
+{% block title %}Mon Profil - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Profile Header -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="scroll-animate">
+            <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">
+                Mon Profil
+            </h1>
+            <p class="text-muted">
+                Gérez vos informations personnelles et vos préférences de compte.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Profile Content -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: start;">
+            
+            <!-- Profile Sidebar -->
+            <div class="scroll-animate">
+                <div class="card" style="text-align: center; margin-bottom: 1.5rem;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
+                            JD
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                            John Doe
+                        </h3>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                            Client depuis Mars 2024
+                        </p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <div>
+                            <div style="font-weight: 600; color: var(--primary);">12</div>
+                            <div style="font-size: 0.8125rem; color: var(--muted-foreground);">Commandes</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--success);">4.8★</div>
+                            <div style="font-size: 0.8125rem; color: var(--muted-foreground);">Note moyenne</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="card">
+                    <h4 style="font-size: 1rem; font-weight: 600; margin-bottom: 1rem;">
+                        Statut du compte
+                    </h4>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></div>
+                            <span style="font-size: 0.875rem;">Email vérifié</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></div>
+                            <span style="font-size: 0.875rem;">Téléphone vérifié</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="width: 8px; height: 8px; background: var(--warning); border-radius: 50%;"></div>
+                            <span style="font-size: 0.875rem;">Profil standard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Profile Form -->
+            <div class="scroll-animate">
+                <div class="card">
+                    <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                        Informations personnelles
+                    </h2>
+                    
+                    <form method="post" style="all: unset; display: block;">
+                        {% csrf_token %}
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label for="first_name" class="form-label">
+                                    Prénom
+                                </label>
+                                <input 
+                                    type="text" 
+                                    class="form-input" 
+                                    id="first_name" 
+                                    name="first_name" 
+                                    value="John"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last_name" class="form-label">
+                                    Nom
+                                </label>
+                                <input 
+                                    type="text" 
+                                    class="form-input" 
+                                    id="last_name" 
+                                    name="last_name" 
+                                    value="Doe"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Adresse email
+                            </label>
+                            <input 
+                                type="email" 
+                                class="form-input" 
+                                id="email" 
+                                name="email" 
+                                value="john@example.com"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Numéro de téléphone
+                            </label>
+                            <input 
+                                type="tel" 
+                                class="form-input" 
+                                id="phone" 
+                                name="phone" 
+                                value="+228 XX XX XX XX"
+                            >
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="birth_date" class="form-label">
+                                    Date de naissance
+                                </label>
+                                <input 
+                                    type="date" 
+                                    class="form-input" 
+                                    id="birth_date" 
+                                    name="birth_date"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender" class="form-label">
+                                    Genre
+                                </label>
+                                <select class="form-input" id="gender" name="gender">
+                                    <option value="">Non spécifié</option>
+                                    <option value="M">Masculin</option>
+                                    <option value="F">Féminin</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address" class="form-label">
+                                Adresse
+                            </label>
+                            <textarea 
+                                class="form-input form-textarea" 
+                                id="address" 
+                                name="address" 
+                                rows="2"
+                                placeholder="Votre adresse complète"
+                            ></textarea>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+                            <button type="button" class="btn btn-secondary">
+                                Annuler
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                Sauvegarder les modifications
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Preferences Card -->
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">
+                        Préférences
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; font-size: 0.875rem;">Notifications par email</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Recevoir les mises à jour par email</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; font-size: 0.875rem;">Notifications SMS</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Recevoir les alertes par SMS</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; font-size: 0.875rem;">Mode sombre</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Interface sombre pour vos yeux</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="dark-mode-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Security Card -->
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">
+                        Sécurité
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; font-size: 0.875rem;">Changer le mot de passe</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Dernière modification il y a 2 mois</div>
+                            </div>
+                            <button class="btn btn-secondary btn-sm">
+                                Modifier
+                            </button>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-weight: 500; font-size: 0.875rem;">Authentification à deux facteurs</div>
+                                <div style="color: var(--muted-foreground); font-size: 0.8125rem;">Sécurité renforcée pour votre compte</div>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                Activer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray-300);
+    transition: .2s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+[data-theme="dark"] .slider {
+    background-color: var(--gray-600);
+}
+
+[data-theme="dark"] input:checked + .slider {
+    background-color: var(--primary);
+}
+</style>
+{% endblock %} 

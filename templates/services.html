@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+
+{% block title %}Services - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Services Hero -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-10);">
+    <div class="container">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;" class="scroll-animate">
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
+                Tous nos services
+            </h1>
+            <p class="text-muted" style="font-size: 1.125rem; margin-bottom: 2rem;">
+                Trouvez le service qu'il vous faut parmi notre large gamme de prestations
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Filters Section -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--space-10);">
+    <div class="container">
+        <div class="card scroll-animate" style="margin-bottom: 2rem;">
+            <form method="GET" style="all: unset; display: block;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="category" class="form-label">
+                            Catégorie
+                        </label>
+                        <select class="form-input" id="category" name="category">
+                            <option value="">Toutes les catégories</option>
+                            <option value="livraison">Livraison Express</option>
+                            <option value="courses">Courses & Livraison</option>
+                            <option value="transport">Transport</option>
+                            <option value="menage">Ménage & Nettoyage</option>
+                            <option value="bricolage">Bricolage & Réparations</option>
+                            <option value="jardinage">Jardinage</option>
+                            <option value="cuisine">Cuisine & Traiteur</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="location" class="form-label">
+                            Localisation
+                        </label>
+                        <input 
+                            type="text" 
+                            class="form-input" 
+                            id="location" 
+                            name="location" 
+                            placeholder="Ville ou quartier"
+                        >
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="availability" class="form-label">
+                            Disponibilité
+                        </label>
+                        <select class="form-input" id="availability" name="availability">
+                            <option value="">Toutes</option>
+                            <option value="available">Disponible maintenant</option>
+                            <option value="today">Disponible aujourd'hui</option>
+                            <option value="tomorrow">Disponible demain</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+                    <button type="reset" class="btn btn-secondary">
+                        Réinitialiser
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Rechercher
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Results Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;" class="scroll-animate">
+            <div>
+                <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.25rem;">
+                    Prestataires disponibles
+                </h2>
+                <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                    12 prestataires trouvés
+                </p>
+            </div>
+            
+            <select class="form-input" style="width: auto; margin-bottom: 0;">
+                <option>Trier par pertinence</option>
+                <option>Note la plus élevée</option>
+                <option>Prix croissant</option>
+                <option>Plus récent</option>
+            </select>
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="grid grid-3">
+            <!-- Service Card 1 -->
+            <div class="card scroll-animate">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <img 
+                        src="https://randomuser.me/api/portraits/men/32.jpg" 
+                        alt="Kossi A." 
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
+                    >
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                        Kossi A.
+                    </h3>
+                    
+                    <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                        Livraison de repas
+                    </p>
+                    
+                    <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                        Disponible maintenant
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                        <div style="color: var(--warning);">★★★★★</div>
+                        <span style="font-weight: 500; margin-left: 0.25rem;">4.8</span>
+                        <span style="color: var(--muted-foreground); font-size: 0.875rem;">(120 avis)</span>
+                    </div>
+                    
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Lomé, Agoè • 2.5 km
+                    </p>
+                </div>
+                
+                <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
+                        <span style="font-weight: 600; color: var(--foreground);">2 000 FCFA</span>
+                    </div>
+                    <button class="btn btn-primary btn-sm" style="width: 100%;">
+                        Voir le profil
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="card scroll-animate">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <img 
+                        src="https://randomuser.me/api/portraits/women/44.jpg" 
+                        alt="Ama D." 
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
+                    >
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                        Ama D.
+                    </h3>
+                    
+                    <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                        Ménage & Nettoyage
+                    </p>
+                    
+                    <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                        Disponible aujourd'hui
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                        <div style="color: var(--warning);">★★★★★</div>
+                        <span style="font-weight: 500; margin-left: 0.25rem;">4.9</span>
+                        <span style="color: var(--muted-foreground); font-size: 0.875rem;">(98 avis)</span>
+                    </div>
+                    
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Lomé, Adidogomé • 1.8 km
+                    </p>
+                </div>
+                
+                <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
+                        <span style="font-weight: 600; color: var(--foreground);">5 000 FCFA</span>
+                    </div>
+                    <button class="btn btn-primary btn-sm" style="width: 100%;">
+                        Voir le profil
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="card scroll-animate">
+                <div style="position: relative; margin-bottom: 1rem;">
+                    <img 
+                        src="https://randomuser.me/api/portraits/men/54.jpg" 
+                        alt="Yawovi K." 
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
+                    >
+                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--warning); border: 2px solid var(--background); border-radius: 50%;"></div>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
+                        Yawovi K.
+                    </h3>
+                    
+                    <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
+                        Transport (Moto)
+                    </p>
+                    
+                    <div style="display: inline-flex; align-items: center; background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
+                        Occuppé
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
+                        <div style="color: var(--warning);">★★★★☆</div>
+                        <span style="font-weight: 500; margin-left: 0.25rem;">4.7</span>
+                        <span style="color: var(--muted-foreground); font-size: 0.875rem;">(75 avis)</span>
+                    </div>
+                    
+                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                        Lomé, Bè • 3.2 km
+                    </p>
+                </div>
+                
+                <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
+                        <span style="font-weight: 600; color: var(--foreground);">1 500 FCFA</span>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" style="width: 100%;" disabled>
+                        Indisponible
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Load More -->
+        <div style="text-align: center; margin-top: 3rem;" class="scroll-animate">
+            <button class="btn btn-secondary btn-lg">
+                Charger plus de services
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %} 
