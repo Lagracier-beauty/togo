@@ -133,9 +133,19 @@ def user_login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
+            username_or_email = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
+            
+            # Essayer de s'authentifier avec le nom d'utilisateur
+            user = authenticate(username=username_or_email, password=password)
+            
+            # Si ça ne marche pas, essayer avec l'email
+            if user is None and '@' in username_or_email:
+                try:
+                    user_obj = User.objects.get(email=username_or_email)
+                    user = authenticate(username=user_obj.username, password=password)
+                except User.DoesNotExist:
+                    user = None
             
             if user is not None:
                 login(request, user)

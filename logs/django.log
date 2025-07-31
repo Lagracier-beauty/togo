@@ -1643,3 +1643,30 @@ Watching for file changes with StatReloader
 "GET /static/css/style-fixed.css HTTP/1.1" 304 0
 "GET /providers/1/ HTTP/1.1" 200 17058
 "GET /static/js/main.js HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET /providers/ HTTP/1.1" 200 37740
+"GET /static/css/style-fixed.css HTTP/1.1" 200 23157
+"GET /static/css/style.css HTTP/1.1" 200 37442
+"GET /static/js/main.js HTTP/1.1" 200 4869
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET / HTTP/1.1" 200 16423
+"GET /login/ HTTP/1.1" 200 15211
+"POST /login/ HTTP/1.1" 200 15458
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 200 15458
+"POST /login/ HTTP/1.1" 200 15455
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /login/ HTTP/1.1" 200 15455
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16641
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
