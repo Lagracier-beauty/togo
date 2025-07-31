@@ -1811,3 +1811,7 @@ Not Found: /users/
 "GET /login/ HTTP/1.1" 200 15381
 "GET /register/ HTTP/1.1" 200 25801
 "GET / HTTP/1.1" 200 16593
+"GET /providers/ HTTP/1.1" 200 37910
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0

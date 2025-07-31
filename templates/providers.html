@@ -78,17 +78,7 @@
             {% for provider in providers %}
                 <div class="card">
                     <div class="card-header">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            {% if provider.user.userprofile.profile_picture %}
-                                <img src="{{ provider.user.userprofile.profile_picture.url }}" 
-                                     alt="{{ provider.user.get_full_name }}" 
-                                     style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                            {% else %}
-                                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">
-                                    {{ provider.user.first_name|slice:":1"|upper|default:"P" }}{{ provider.user.last_name|slice:":1"|upper|default:"" }}
-                                </div>
-                            {% endif %}
-                            
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                             <div style="flex: 1;">
                                 <h4 style="margin: 0; font-weight: 600; font-size: 1.1rem;">
                                     {{ provider.user.get_full_name|default:provider.user.username }}

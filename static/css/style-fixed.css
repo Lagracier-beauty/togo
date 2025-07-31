@@ -801,28 +801,7 @@ input[type="radio"] {
     margin-bottom: var(--space-4);
 }
 
-.provider-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--border);
-    flex-shrink: 0;
-}
 
-.provider-avatar-placeholder {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: var(--primary);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: var(--text-lg);
-    flex-shrink: 0;
-}
 
 .provider-info {
     flex: 1;
@@ -1061,11 +1040,7 @@ input[type="radio"] {
         gap: var(--space-2);
     }
     
-    .provider-avatar,
-    .provider-avatar-placeholder {
-        width: 48px;
-        height: 48px;
-    }
+
 }
 
 /* Styles pour les nouveaux formulaires */
