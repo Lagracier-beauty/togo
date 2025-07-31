@@ -1815,3 +1815,12 @@ Not Found: /users/
 "GET /static/css/style.css HTTP/1.1" 304 0
 "GET /static/css/style-fixed.css HTTP/1.1" 304 0
 "GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 35768
+"GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 200 22572
+"GET /static/js/main.js HTTP/1.1" 200 4869
+"GET /static/css/style.css HTTP/1.1" 200 37442
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /providers/1/ HTTP/1.1" 200 16737
+"GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 200 22572
+"GET /providers/ HTTP/1.1" 200 35768
+"GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 304 0
