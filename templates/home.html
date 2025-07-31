@@ -1,232 +1,198 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Tog-Services - Services à la demande au Togo{% endblock %}
+{% block title %}Accueil - Tog-Services{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
+<!-- Hero Section Épuré -->
 <section class="hero">
-    <div class="container">
-        <div class="hero-content scroll-animate">
-            <h1 class="hero-title">
-                Services à la demande<br>
-                <span style="color: var(--primary);">au Togo</span>
-            </h1>
-            <p class="hero-subtitle">
-                Trouvez rapidement des prestataires qualifiés pour tous vos besoins : 
-                livraison, transport, ménage et bricolage.
-            </p>
-            
-            <div class="hero-actions">
-                <a href="{% url 'services:services' %}" class="btn btn-primary btn-lg">
-                    Trouver un service
-                </a>
-                <a href="{% url 'providers:provider_register' %}" class="btn btn-secondary btn-lg">
-                    Devenir prestataire
-                </a>
+    <div class="hero-content">
+        <div class="hero-badge">
+            🇹🇬 #1 au Togo
+        </div>
+        
+        <h1 class="hero-title">
+            Vos services du quotidien,<br>
+            <span class="text-gradient">en quelques clics</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+            Tog-Services facilite la mise en relation entre les utilisateurs et les prestataires locaux qualifiés 
+            pour tous vos besoins : transport, livraison, ménage, bricolage et plus encore.
+        </p>
+
+        <!-- Barre de recherche épurée -->
+        <div class="hero-search">
+            <div class="search-form">
+                <div class="search-inputs">
+                    <div class="search-input-group">
+                        <input 
+                            type="text" 
+                            placeholder="Quel service recherchez-vous ?"
+                            class="search-input"
+                            readonly
+                        >
+                    </div>
+                    
+                    <a href="{% url 'services:services' %}" class="search-btn">
+                        Voir les services
+                    </a>
+                </div>
             </div>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">1200+</span>
-                    <span class="stat-label">Services effectués</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">350+</span>
-                    <span class="stat-label">Prestataires actifs</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">850+</span>
-                    <span class="stat-label">Clients satisfaits</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">4.8★</span>
-                    <span class="stat-label">Note moyenne</span>
-                </div>
+        </div>
+
+        <!-- Catégories populaires -->
+        <div class="hero-categories">
+            <a href="{% url 'services:services' %}?category=transport" class="category-tag">
+                Transport
+            </a>
+            <a href="{% url 'services:services' %}?category=livraison" class="category-tag">
+                Livraison
+            </a>
+            <a href="{% url 'services:services' %}?category=menage" class="category-tag">
+                Ménage
+            </a>
+            <a href="{% url 'services:services' %}?category=bricolage" class="category-tag">
+                Bricolage
+            </a>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-number">1,200+</div>
+                <div class="hero-stat-label">Utilisateurs actifs</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">300+</div>
+                <div class="hero-stat-label">Prestataires vérifiés</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">2,500+</div>
+                <div class="hero-stat-label">Services réalisés</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services Section -->
+<!-- Services disponibles -->
 <section class="section">
     <div class="container">
-        <div class="section-header scroll-animate">
-            <h2 class="section-title">Nos services</h2>
-            <p class="section-subtitle">
-                Des solutions complètes pour tous vos besoins quotidiens
+        <div style="text-align: center; margin-bottom: var(--space-12);">
+            <h2 style="font-size: var(--text-3xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-4);">
+                Nos Services
+            </h2>
+            <p style="font-size: var(--text-lg); color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Une gamme complète de services pour simplifier votre quotidien au Togo
             </p>
         </div>
         
         <div class="grid grid-2">
-            <div class="card scroll-animate">
-                <h3 class="card-title">Livraison Express</h3>
-                <p class="card-description">
-                    Livraison rapide de vos colis, courses et repas partout à Lomé et environs. 
-                    Suivi en temps réel inclus.
-                </p>
-                <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                    <span style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Suivi GPS</span>
-                    <span style="background: var(--success); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">24h/24</span>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🚗 Transport</h3>
+                    <p class="card-subtitle">Déplacements urbains et inter-villes</p>
+                </div>
+                <div class="card-body">
+                    <p>Taxi, moto-taxi, VTC et transport de marchandises avec des chauffeurs vérifiés.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'services:services' %}?category=transport" class="btn btn-outline">Explorer</a>
                 </div>
             </div>
             
-            <div class="card scroll-animate">
-                <h3 class="card-title">Transport</h3>
-                <p class="card-description">
-                    Déplacements en moto-taxi ou VTC avec des chauffeurs vérifiés. 
-                    Tarifs transparents et trajets sécurisés.
-                </p>
-                <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                    <span style="background: var(--warning); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Vérifiés</span>
-                    <span style="background: var(--accent); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Prix fixe</span>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🛍️ Livraison</h3>
+                    <p class="card-subtitle">Courses et envoi de colis</p>
+                </div>
+                <div class="card-body">
+                    <p>Livraison de repas, courses et envoi de colis rapide et sécurisé partout au Togo.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'services:services' %}?category=livraison" class="btn btn-outline">Explorer</a>
                 </div>
             </div>
             
-            <div class="card scroll-animate">
-                <h3 class="card-title">Ménage & Nettoyage</h3>
-                <p class="card-description">
-                    Services de ménage professionnel pour votre domicile ou bureau. 
-                    Équipement fourni et garantie satisfaction.
-                </p>
-                <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                    <span style="background: var(--secondary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Équipement fourni</span>
-                    <span style="background: var(--success); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Assuré</span>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🧹 Ménage</h3>
+                    <p class="card-subtitle">Entretien de votre domicile</p>
+                </div>
+                <div class="card-body">
+                    <p>Nettoyage professionnel, repassage et entretien général par des experts qualifiés.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'services:services' %}?category=menage" class="btn btn-outline">Explorer</a>
                 </div>
             </div>
             
-            <div class="card scroll-animate">
-                <h3 class="card-title">Bricolage & Réparations</h3>
-                <p class="card-description">
-                    Petits travaux de bricolage, réparations et maintenance par des artisans qualifiés. 
-                    Devis gratuit avant intervention.
-                </p>
-                <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                    <span style="background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Qualifiés</span>
-                    <span style="background: var(--warning); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Devis gratuit</span>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">🔧 Bricolage</h3>
+                    <p class="card-subtitle">Réparations et travaux</p>
+                </div>
+                <div class="card-body">
+                    <p>Plomberie, électricité, menuiserie et toutes vos réparations du quotidien.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'services:services' %}?category=bricolage" class="btn btn-outline">Explorer</a>
                 </div>
             </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="{% url 'services:services' %}" class="btn btn-primary btn-lg">
-                Voir tous les services
-            </a>
         </div>
     </div>
 </section>
 
-<!-- How it works -->
-<section class="section" style="background: var(--muted);">
+<!-- Comment ça marche -->
+<section class="section" style="background: var(--bg-light);">
     <div class="container">
-        <div class="section-header scroll-animate">
-            <h2 class="section-title">Comment ça marche</h2>
-            <p class="section-subtitle">
-                Trois étapes simples pour accéder à tous vos services
+        <div style="text-align: center; margin-bottom: var(--space-12);">
+            <h2 style="font-size: var(--text-3xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-4);">
+                Comment ça marche ?
+            </h2>
+            <p style="font-size: var(--text-lg); color: var(--text-secondary);">
+                Trois étapes simples pour accéder à nos services
             </p>
         </div>
         
         <div class="grid grid-3">
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="width: 48px; height: 48px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 600;">1</div>
-                <h3 class="card-title">Recherchez</h3>
-                <p class="card-description">
-                    Naviguez par catégories pour trouver le service dont vous avez besoin.
-                </p>
+            <div class="card" style="text-align: center;">
+                <div style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">🔍</div>
+                <h3 style="color: var(--text-primary); margin-bottom: var(--space-3);">1. Recherchez</h3>
+                <p>Trouvez le service dont vous avez besoin dans votre zone géographique</p>
             </div>
             
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="width: 48px; height: 48px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 600;">2</div>
-                <h3 class="card-title">Choisissez</h3>
-                <p class="card-description">
-                    Comparez les prestataires et sélectionnez celui qui correspond à vos besoins.
-                </p>
+            <div class="card" style="text-align: center;">
+                <div style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">📞</div>
+                <h3 style="color: var(--text-primary); margin-bottom: var(--space-3);">2. Contactez</h3>
+                <p>Entrez en contact direct avec le prestataire et convenez des détails</p>
             </div>
             
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: white; font-weight: 600;">3</div>
-                <h3 class="card-title">Profitez</h3>
-                <p class="card-description">
-                    Réservez en ligne, suivez votre commande et payez de manière sécurisée.
-                </p>
+            <div class="card" style="text-align: center;">
+                <div style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">✅</div>
+                <h3 style="color: var(--text-primary); margin-bottom: var(--space-3);">3. Profitez</h3>
+                <p>Recevez votre service de qualité et évaluez votre expérience</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials -->
+<!-- Appel à l'action -->
 <section class="section">
     <div class="container">
-        <div class="section-header scroll-animate">
-            <h2 class="section-title">Ce que disent nos clients</h2>
-        </div>
-        
-        <div class="grid grid-3">
-            <div class="card scroll-animate">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                    <div style="width: 40px; height: 40px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.875rem;">MK</div>
-                    <div>
-                        <div style="font-weight: 500;">Marie K.</div>
-                        <div style="color: var(--warning); font-size: 0.875rem;">★★★★★</div>
-                    </div>
-                </div>
-                <p style="color: var(--muted-foreground);">
-                    "Service de ménage exceptionnel ! Je recommande vivement Tog-Services."
-                </p>
-            </div>
-            
-            <div class="card scroll-animate">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                    <div style="width: 40px; height: 40px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.875rem;">JB</div>
-                    <div>
-                        <div style="font-weight: 500;">Jean-Baptiste A.</div>
-                        <div style="color: var(--warning); font-size: 0.875rem;">★★★★★</div>
-                    </div>
-                </div>
-                <p style="color: var(--muted-foreground);">
-                    "Livraison ultra rapide ! Cette plateforme va révolutionner les services au Togo."
-                </p>
-            </div>
-            
-            <div class="card scroll-animate">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                    <div style="width: 40px; height: 40px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.875rem;">ET</div>
-                    <div>
-                        <div style="font-weight: 500;">Emilie T.</div>
-                        <div style="color: var(--warning); font-size: 0.875rem;">★★★★★</div>
-                    </div>
-                </div>
-                <p style="color: var(--muted-foreground);">
-                    "Artisan compétent, tarifs transparents. Merci pour cette solution pratique !"
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="section" style="background: var(--primary); color: white;">
-    <div class="container" style="text-align: center;">
-        <div class="scroll-animate">
-            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
-                Prêt à commencer ?
+        <div style="text-align: center;">
+            <h2 style="font-size: var(--text-3xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-4);">
+                Rejoignez Tog-Services
             </h2>
-            <p style="font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Rejoignez des milliers d'utilisateurs qui font confiance à Tog-Services 
-                pour leurs besoins quotidiens.
+            <p style="font-size: var(--text-lg); color: var(--text-secondary); margin-bottom: var(--space-8); max-width: 500px; margin-left: auto; margin-right: auto;">
+                Simplifiez votre quotidien avec des services fiables et des prestataires vérifiés
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                {% if not user.is_authenticated %}
-                    <a href="{% url 'users:register' %}" class="btn btn-lg" style="background: white; color: var(--primary);">
-                        S'inscrire gratuitement
-                    </a>
-                {% else %}
-                    <a href="{% url 'services:services' %}" class="btn btn-lg" style="background: white; color: var(--primary);">
-                        Trouver un service
-                    </a>
-                {% endif %}
-                <a href="{% url 'providers:provider_register' %}" class="btn btn-lg" style="background: transparent; color: white; border: 2px solid white;">
-                    Devenir prestataire
+            <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
+                <a href="{% url 'users:register' %}" class="btn btn-primary" style="padding: var(--space-4) var(--space-8);">
+                    Commencer maintenant
+                </a>
+                <a href="{% url 'providers:providers' %}" class="btn btn-outline" style="padding: var(--space-4) var(--space-8);">
+                    Voir les prestataires
                 </a>
             </div>
         </div>

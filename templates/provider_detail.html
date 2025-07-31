@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ provider.user.get_full_name|default:provider.user.username }} - Tog-Services{% endblock %}
+
+{% block content %}
+<!-- Provider Hero -->
+<section class="section" style="padding-top: var(--space-12); padding-bottom: var(--space-8);">
+    <div class="container">
+        <div class="scroll-animate">
+            <div style="display: flex; gap: 2rem; align-items: start;">
+                <!-- Provider Avatar -->
+                <div style="flex-shrink: 0;">
+                    {% if provider.user.userprofile.profile_picture %}
+                        <img src="{{ provider.user.userprofile.profile_picture.url }}" 
+                             alt="{{ provider.user.get_full_name }}" 
+                             style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--background-alt);">
+                    {% else %}
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 3rem; border: 4px solid var(--background-alt);">
+                            {{ provider.user.first_name|slice:":1"|upper|default:"P" }}{{ provider.user.last_name|slice:":1"|upper|default:"" }}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Provider Info -->
+                <div style="flex: 1;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <h1 style="font-size: 2rem; font-weight: 700; margin: 0;">
+                            {{ provider.user.get_full_name|default:provider.user.username }}
+                        </h1>
+                        
+                        {% if provider.is_available %}
+                            <span class="badge badge-success">Disponible</span>
+                        {% else %}
+                            <span class="badge badge-secondary">Occupé</span>
+                        {% endif %}
+                        
+                        {% if provider.is_verified %}
+                            <span class="badge badge-primary">✓ Vérifié</span>
+                        {% endif %}
+                    </div>
+                    
+                    <p style="font-size: 1.125rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 500;">
+                        {{ provider.get_service_type_display }}
+                    </p>
+                    
+                    {% if avg_rating > 0 %}
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                            <div style="color: var(--warning); font-size: 1.25rem;">
+                                {% for i in "12345" %}
+                                    {% if forloop.counter <= avg_rating %}⭐{% else %}☆{% endif %}
+                                {% endfor %}
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.125rem;">{{ avg_rating }}</span>
+                            <span style="color: var(--text-muted);">({{ total_orders }} prestations)</span>
+                        </div>
+                    {% endif %}
+                    
+                    {% if provider.description %}
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                            {{ provider.description }}
+                        </p>
+                    {% endif %}
+                    
+                    <!-- Quick Stats -->
+                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <div style="font-weight: 600; font-size: 1.25rem; color: var(--primary);">{{ provider.experience_years }}</div>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">Années d'expérience</div>
+                        </div>
+                        
+                        <div>
+                            <div style="font-weight: 600; font-size: 1.25rem; color: var(--primary);">{{ total_orders }}</div>
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">Prestations réalisées</div>
+                        </div>
+                        
+                        {% if provider.hourly_rate %}
+                            <div>
+                                <div style="font-weight: 600; font-size: 1.25rem; color: var(--primary);">{{ provider.hourly_rate }}€</div>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">Tarif horaire</div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Actions -->
+                    <div style="display: flex; gap: 1rem;">
+                        <button class="btn btn-primary btn-lg">
+                            Contacter le prestataire
+                        </button>
+                        <button class="btn btn-outline btn-lg">
+                            Commander un service
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+{% if services %}
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;" class="scroll-animate">
+            Services proposés
+        </h2>
+        
+        <div class="grid grid-2 scroll-animate">
+            {% for service in services %}
+                <div class="card">
+                    {% if service.serviceimage_set.first %}
+                        <img src="{{ service.serviceimage_set.first.image.url }}" 
+                             alt="{{ service.title }}" 
+                             style="width: 100%; height: 150px; object-fit: cover; border-radius: var(--radius); margin-bottom: 1rem;">
+                    {% endif %}
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <div style="flex: 1;">
+                            <h4 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem;">
+                                {{ service.title }}
+                            </h4>
+                            <p style="margin: 0; color: var(--text-muted); font-size: 0.875rem;">
+                                {{ service.category.name }}
+                            </p>
+                        </div>
+                        
+                        <div style="text-align: right;">
+                            {% if service.pricing_type == 'fixed' %}
+                                <div style="font-weight: 600; color: var(--primary);">{{ service.base_price }}€</div>
+                            {% elif service.pricing_type == 'hourly' %}
+                                <div style="font-weight: 600; color: var(--primary);">{{ service.base_price }}€/h</div>
+                            {% else %}
+                                <div style="font-weight: 600; color: var(--primary);">{{ service.min_price }}€ - {{ service.max_price }}€</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.875rem;">
+                        {{ service.description|truncatewords:15 }}
+                    </p>
+                    
+                    {% if service.duration_minutes %}
+                        <div style="margin-bottom: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+                            ⏱️ Durée estimée: {{ service.duration_minutes }} minutes
+                        </div>
+                    {% endif %}
+                    
+                    <button class="btn btn-primary btn-sm" style="width: 100%;">
+                        Commander ce service
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Zones d'intervention -->
+{% if provider.zones.all %}
+<section class="section">
+    <div class="container">
+        <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;" class="scroll-animate">
+            Zones d'intervention
+        </h2>
+        
+        <div class="card scroll-animate">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                {% for zone in provider.zones.all %}
+                    <div style="padding: 0.5rem 1rem; background: var(--background-alt); border-radius: var(--radius-full); border: 1px solid var(--border);">
+                        <strong>{{ zone.city }}</strong>
+                        {% if zone.district %}
+                            <span style="color: var(--text-muted);">• {{ zone.district }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Avis clients -->
+{% if recent_reviews %}
+<section class="section">
+    <div class="container">
+        <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;" class="scroll-animate">
+            Avis clients récents
+        </h2>
+        
+        <div class="grid grid-2 scroll-animate">
+            {% for order in recent_reviews %}
+                <div class="card">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+                            {{ order.customer.first_name|slice:":1"|upper|default:"C" }}
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <div style="font-weight: 500;">{{ order.customer.get_full_name|default:order.customer.username }}</div>
+                            <div style="color: var(--text-muted); font-size: 0.875rem;">{{ order.completed_at|date:"d M Y" }}</div>
+                        </div>
+                        
+                        <div style="color: var(--warning);">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= order.rating.customer_rating %}⭐{% else %}☆{% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    {% if order.rating.customer_comment %}
+                        <p style="color: var(--text-secondary); font-style: italic; margin: 0;">
+                            "{{ order.rating.customer_comment }}"
+                        </p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="section" style="background: var(--background-alt);">
+    <div class="container" style="text-align: center;">
+        <div class="scroll-animate">
+            <h2 style="font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem;">
+                Prêt à commander un service ?
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                Contactez {{ provider.user.first_name|default:"ce prestataire" }} dès maintenant pour vos besoins en {{ provider.get_service_type_display|lower }}
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <button class="btn btn-primary btn-lg">
+                    Contacter maintenant
+                </button>
+                <a href="{% url 'providers:providers' %}" class="btn btn-outline btn-lg">
+                    Voir d'autres prestataires
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

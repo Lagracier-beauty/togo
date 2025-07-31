@@ -1,161 +1,369 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Inscription - Tog-Services{% endblock %}
 
+{% block meta_description %}Rejoignez Tog-Services et accédez aux meilleurs services à domicile au Togo{% endblock %}
+
 {% block content %}
-<!-- Register Section -->
-<section class="section">
-    <div class="container-sm">
-        <div style="max-width: 400px; margin: 0 auto;">
-            <!-- Header -->
-            <div style="text-align: center; margin-bottom: 2rem;" class="scroll-animate">
-                <h1 style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;">
+<section class="section" style="min-height: 100vh; display: flex; align-items: center; padding-top: var(--space-16); padding-bottom: var(--space-16);">
+    <div class="container">
+        <div class="scroll-animate" style="max-width: 500px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">
                     Créer un compte
                 </h1>
-                <p class="text-muted">
-                    Rejoignez Tog-Services et accédez à tous nos services
+                <p style="color: var(--muted-foreground);">
+                    Rejoignez des milliers d'utilisateurs satisfaits
                 </p>
             </div>
-
-            <!-- Register Form -->
-            <div class="card scroll-animate">
-                <form method="post" style="all: unset; display: block;">
-                    {% csrf_token %}
-                    
-                    <div class="form-group">
-                        <label for="name" class="form-label">
-                            Nom complet
-                        </label>
-                        <input 
-                            type="text" 
-                            class="form-input" 
-                            id="name" 
-                            name="name" 
-                            placeholder="Votre nom complet"
-                            required
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">
-                            Adresse email
-                        </label>
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            id="email" 
-                            name="email" 
-                            placeholder="email@exemple.com"
-                            required
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone" class="form-label">
-                            Numéro de téléphone
-                        </label>
-                        <input 
-                            type="tel" 
-                            class="form-input" 
-                            id="phone" 
-                            name="phone" 
-                            placeholder="+228 XX XX XX XX"
-                            required
-                        >
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password" class="form-label">
-                            Mot de passe
-                        </label>
-                        <input 
-                            type="password" 
-                            class="form-input" 
-                            id="password" 
-                            name="password" 
-                            placeholder="••••••••"
-                            required
-                        >
-                        <div style="font-size: 0.8125rem; color: var(--muted-foreground); margin-top: 0.25rem;">
-                            Minimum 8 caractères avec au moins une lettre et un chiffre
-                        </div>
-                    </div>
-                    
-                    <!-- Terms & Conditions -->
-                    <div style="margin-bottom: 1.5rem;">
-                        <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; font-size: 0.875rem; line-height: 1.4;">
-                            <input type="checkbox" required style="margin-top: 0.125rem;">
-                            <span style="color: var(--muted-foreground);">
-                                J'accepte les 
-                                <a href="#" style="color: var(--primary); text-decoration: none;">conditions d'utilisation</a>
-                                et la 
-                                <a href="#" style="color: var(--primary); text-decoration: none;">politique de confidentialité</a>
-                            </span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
-                        Créer mon compte
-                    </button>
-                </form>
-                
-                <!-- Divider -->
-                <div style="position: relative; margin: 1.5rem 0;">
-                    <div style="position: absolute; inset: 0; display: flex; align-items: center;">
-                        <div style="width: 100%; border-top: 1px solid var(--border);"></div>
-                    </div>
-                    <div style="position: relative; display: flex; justify-content: center; font-size: 0.875rem;">
-                        <span style="background: var(--background); padding: 0 1rem; color: var(--muted-foreground);">
-                            ou
-                        </span>
-                    </div>
-                </div>
-                
-                <!-- Social Register -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem;">
-                    <button type="button" class="btn btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                        </svg>
-                        Google
-                    </button>
-                    <button type="button" class="btn btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                        Facebook
-                    </button>
-                </div>
-                
-                <!-- Login Link -->
-                <div style="text-align: center;">
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">
-                        Déjà un compte ? 
-                        <a href="{% url 'users:login' %}" style="color: var(--primary); text-decoration: none; font-weight: 500;">
-                            Connectez-vous
-                        </a>
-                    </span>
-                </div>
-            </div>
             
-            <!-- Provider Registration Link -->
-            <div style="text-align: center; margin-top: 2rem;" class="scroll-animate">
-                <div style="padding: 1rem; background: var(--muted); border-radius: var(--radius); border: 1px solid var(--border);">
-                    <p style="margin-bottom: 0.5rem; font-weight: 500; color: var(--foreground);">
-                        Vous êtes un prestataire ?
-                    </p>
-                    <p style="margin-bottom: 1rem; color: var(--muted-foreground); font-size: 0.875rem;">
-                        Rejoignez notre réseau de professionnels et développez votre activité
-                    </p>
-                    <a href="{% url 'providers:provider_register' %}" class="btn btn-primary">
-                        Devenir prestataire
-                    </a>
+            <form method="post" style="background: var(--card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                {% csrf_token %}
+                
+                <!-- Type d'utilisateur -->
+                <div class="form-group">
+                    <label class="form-label">Type de compte</label>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        {% for choice in form.user_type %}
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); transition: all 0.2s;">
+                                {{ choice.tag }}
+                                <span>{{ choice.choice_label }}</span>
+                            </label>
+                        {% endfor %}
+                    </div>
+                    {% if form.user_type.errors %}
+                        <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                            {{ form.user_type.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- Informations personnelles -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="{{ form.first_name.id_for_label }}" class="form-label">Prénom</label>
+                        {{ form.first_name }}
+                        {% if form.first_name.errors %}
+                            <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                                {{ form.first_name.errors.0 }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="{{ form.last_name.id_for_label }}" class="form-label">Nom de famille</label>
+                        {{ form.last_name }}
+                        {% if form.last_name.errors %}
+                            <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                                {{ form.last_name.errors.0 }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.username.id_for_label }}" class="form-label">Nom d'utilisateur</label>
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                        <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                            {{ form.username.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">Adresse email</label>
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                        <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                            {{ form.email.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.phone.id_for_label }}" class="form-label">Téléphone</label>
+                    {{ form.phone }}
+                    {% if form.phone.errors %}
+                        <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                            {{ form.phone.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.password1.id_for_label }}" class="form-label">Mot de passe</label>
+                    <div style="position: relative;">
+                        {{ form.password1 }}
+                        <button type="button" 
+                                class="password-toggle" 
+                                onclick="togglePassword('{{ form.password1.id_for_label }}')"
+                                style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 4px;">
+                            <svg id="eye-icon-{{ form.password1.id_for_label }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <svg id="eye-off-icon-{{ form.password1.id_for_label }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                <line x1="1" y1="1" x2="23" y2="23"/>
+                            </svg>
+                        </button>
+                    </div>
+                    {% if form.password1.errors %}
+                        <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                            {{ form.password1.errors.0 }}
+                        </div>
+                    {% endif %}
+                    <div style="color: var(--muted-foreground); font-size: 0.8125rem; margin-top: 0.5rem;">
+                        Au moins 8 caractères avec lettres et chiffres
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ form.password2.id_for_label }}" class="form-label">Confirmer le mot de passe</label>
+                    <div style="position: relative;">
+                        {{ form.password2 }}
+                        <button type="button" 
+                                class="password-toggle" 
+                                onclick="togglePassword('{{ form.password2.id_for_label }}')"
+                                style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 4px;">
+                            <svg id="eye-icon-{{ form.password2.id_for_label }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <svg id="eye-off-icon-{{ form.password2.id_for_label }}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                <line x1="1" y1="1" x2="23" y2="23"/>
+                            </svg>
+                        </button>
+                    </div>
+                    {% if form.password2.errors %}
+                        <div style="color: var(--error); font-size: 0.875rem; margin-top: 0.5rem;">
+                            {{ form.password2.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" name="accept_terms" required class="form-checkbox">
+                        <span style="font-size: 0.875rem;">
+                            J'accepte les <a href="#" style="color: var(--primary);">conditions d'utilisation</a> et la <a href="#" style="color: var(--primary);">politique de confidentialité</a>
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Créer mon compte
+                </button>
+            </form>
+
+            <!-- Divider -->
+            <div style="display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0;">
+                <div style="flex: 1; height: 1px; background: var(--border);"></div>
+                <span style="color: var(--muted-foreground); font-size: 0.875rem;">ou</span>
+                <div style="flex: 1; height: 1px; background: var(--border);"></div>
+            </div>
+
+            <!-- Social Login -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <button type="button" class="btn btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    Google
+                </button>
+                
+                <button type="button" class="btn btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Facebook
+                </button>
+            </div>
+
+            <!-- Login Link -->
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <span style="color: var(--muted-foreground);">Déjà un compte ?</span>
+                <a href="{% url 'users:login' %}" style="color: var(--primary); font-weight: 600; margin-left: 0.5rem;">
+                    Se connecter
+                </a>
+            </div>
+
+            <!-- Provider Registration Info -->
+            <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius); padding: 1rem; margin-top: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 0.25rem; color: var(--primary);">Vous êtes prestataire ?</h4>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem; margin: 0;">
+                            Sélectionnez "Prestataire" ci-dessus pour accéder à l'inscription prestataire.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+// Formulaire d'inscription dynamique
+document.addEventListener('DOMContentLoaded', function() {
+    const userTypeRadios = document.querySelectorAll('input[name="user_type"]');
+    const providerInfo = document.querySelector('.provider-info');
+    
+    // Debug
+    console.log('Found radio buttons:', userTypeRadios.length);
+    console.log('Provider info section:', providerInfo);
+    
+    function updateFormForUserType(userType) {
+        console.log('Switching to user type:', userType);
+        
+        if (userType === 'provider') {
+            // Montrer des informations spécifiques aux prestataires
+            if (providerInfo) {
+                providerInfo.style.display = 'block';
+                providerInfo.style.opacity = '1';
+                providerInfo.style.transform = 'translateY(0)';
+            }
+            
+            // Changer le texte du bouton
+            const submitBtn = document.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.textContent = 'Créer mon compte prestataire';
+            }
+            
+            // Ajouter une note d'information
+            const infoNote = document.querySelector('.provider-note') || createProviderNote();
+            if (infoNote) {
+                infoNote.style.display = 'block';
+            }
+            
+        } else {
+            // Mode client
+            if (providerInfo) {
+                providerInfo.style.display = 'none';
+            }
+            
+            const submitBtn = document.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.textContent = 'Créer mon compte';
+            }
+            
+            const infoNote = document.querySelector('.provider-note');
+            if (infoNote) {
+                infoNote.style.display = 'none';
+            }
+        }
+    }
+    
+    function createProviderNote() {
+        const note = document.createElement('div');
+        note.className = 'provider-note';
+        note.style.cssText = `
+            background: var(--info-bg);
+            border: 1px solid var(--info);
+            border-radius: var(--radius);
+            padding: var(--space-4);
+            margin-top: var(--space-4);
+            color: var(--info);
+            font-size: 0.875rem;
+        `;
+        note.innerHTML = `
+            <strong>📋 Compte Prestataire</strong><br>
+            Après votre inscription, vous pourrez compléter votre profil professionnel, 
+            ajouter vos services et commencer à recevoir des commandes.
+        `;
+        
+        // Insérer avant le bouton de soumission
+        const submitBtn = document.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.parentNode.insertBefore(note, submitBtn);
+        }
+        
+        return note;
+    }
+    
+    // Écouter les changements des radio buttons
+    userTypeRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            console.log('Radio changed to:', this.value);
+            updateFormForUserType(this.value);
+            
+            // Animation visuelle
+            const label = this.closest('label');
+            if (label) {
+                // Retirer la classe active de tous les labels
+                userTypeRadios.forEach(r => {
+                    const l = r.closest('label');
+                    if (l) {
+                        l.style.background = 'var(--background)';
+                        l.style.borderColor = 'var(--border)';
+                        l.style.color = 'var(--text-secondary)';
+                    }
+                });
+                
+                // Ajouter la classe active au label sélectionné
+                label.style.background = 'var(--primary-light)';
+                label.style.borderColor = 'var(--primary)';
+                label.style.color = 'var(--primary)';
+            }
+        });
+    });
+    
+    // Initialiser avec la valeur par défaut
+    const checkedRadio = document.querySelector('input[name="user_type"]:checked');
+    if (checkedRadio) {
+        updateFormForUserType(checkedRadio.value);
+    } else {
+        // Par défaut, client
+        updateFormForUserType('client');
+    }
+    
+    // Améliorer le style des radio buttons
+    userTypeRadios.forEach(radio => {
+        const label = radio.closest('label');
+        if (label) {
+            label.style.transition = 'all 0.3s ease';
+            label.addEventListener('mouseenter', function() {
+                if (!radio.checked) {
+                    this.style.borderColor = 'var(--primary)';
+                    this.style.transform = 'translateY(-2px)';
+                }
+            });
+            
+            label.addEventListener('mouseleave', function() {
+                if (!radio.checked) {
+                    this.style.borderColor = 'var(--border)';
+                    this.style.transform = 'translateY(0)';
+                }
+            });
+        }
+    });
+});
+
+// Fonction pour toggle password visibility
+function togglePassword(fieldId) {
+    const passwordField = document.getElementById(fieldId);
+    const eyeIcon = document.getElementById(`eye-icon-${fieldId}`);
+    const eyeOffIcon = document.getElementById(`eye-off-icon-${fieldId}`);
+    
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.style.display = 'none';
+        eyeOffIcon.style.display = 'block';
+    } else {
+        passwordField.type = 'password';
+        eyeIcon.style.display = 'block';
+        eyeOffIcon.style.display = 'none';
+    }
+}
+</script>
 {% endblock %} 

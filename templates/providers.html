@@ -8,284 +8,206 @@
     <div class="container">
         <div style="max-width: 600px; margin: 0 auto; text-align: center;" class="scroll-animate">
             <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">
-                Nos prestataires
+                Nos Prestataires
             </h1>
             <p class="text-muted" style="font-size: 1.125rem; margin-bottom: 2rem;">
-                Découvrez des professionnels qualifiés et vérifiés prêts à répondre à vos besoins
+                Découvrez nos prestataires de services qualifiés et vérifiés
             </p>
-            
-            <!-- Search and Filters -->
-            <div style="display: flex; gap: 0.75rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-                <div style="flex: 1;">
-                    <input 
-                        type="search" 
-                        class="form-input" 
-                        placeholder="Rechercher un prestataire..."
-                        style="margin-bottom: 0;"
-                    >
-                </div>
-                <select class="form-input" style="width: auto; margin-bottom: 0;">
-                    <option>Tous les services</option>
-                    <option>Livraison</option>
-                    <option>Transport</option>
-                    <option>Ménage</option>
-                    <option>Bricolage</option>
-                </select>
-            </div>
         </div>
     </div>
 </section>
 
-<!-- Providers Grid -->
-<section class="section" style="padding-top: 0;">
+<!-- Filters Section -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--space-10);">
     <div class="container">
-        <div class="grid grid-3">
-            <!-- Provider 1 -->
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <img 
-                        src="https://randomuser.me/api/portraits/men/32.jpg" 
-                        alt="Kossi A." 
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto;"
-                    >
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Kossi A.
-                </h3>
-                
-                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    Livraison de repas
-                </p>
-                
-                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                    Disponible
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                    <div style="color: var(--warning);">★★★★★</div>
-                    <span style="font-weight: 500; margin-left: 0.25rem;">4.8</span>
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(120 avis)</span>
-                </div>
-                
-                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
-                    Lomé, Agoè
-                </p>
-                
-                <button class="btn btn-primary btn-sm" style="width: 100%;">
-                    Voir le profil
-                </button>
-            </div>
+        <div class="card card-with-select scroll-animate" style="margin-bottom: 2rem; position: relative; z-index: 10;">
+            <h3 style="margin-bottom: 1.5rem; font-weight: 600;">
+                Filtrer les prestataires
+            </h3>
             
-            <!-- Provider 2 -->
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <img 
-                        src="https://randomuser.me/api/portraits/women/44.jpg" 
-                        alt="Ama D." 
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto;"
-                    >
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Ama D.
-                </h3>
-                
-                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    Ménage
-                </p>
-                
-                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                    Disponible
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                    <div style="color: var(--warning);">★★★★★</div>
-                    <span style="font-weight: 500; margin-left: 0.25rem;">4.9</span>
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(98 avis)</span>
-                </div>
-                
-                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
-                    Lomé, Adidogomé
-                </p>
-                
-                <button class="btn btn-primary btn-sm" style="width: 100%;">
-                    Voir le profil
-                </button>
-            </div>
-            
-            <!-- Provider 3 -->
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <img 
-                        src="https://randomuser.me/api/portraits/men/54.jpg" 
-                        alt="Yawovi K." 
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto;"
-                    >
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--warning); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Yawovi K.
-                </h3>
-                
-                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    Transport
-                </p>
-                
-                <div style="display: inline-flex; align-items: center; background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                    Occupé
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                    <div style="color: var(--warning);">★★★★☆</div>
-                    <span style="font-weight: 500; margin-left: 0.25rem;">4.7</span>
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(75 avis)</span>
-                </div>
-                
-                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
-                    Lomé, Bè
-                </p>
-                
-                <button class="btn btn-secondary btn-sm" style="width: 100%;" disabled>
-                    Occupé
-                </button>
-            </div>
-            
-            <!-- Provider 4 -->
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
-                        SK
+            <form method="GET" style="all: unset; display: block;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                    <div class="form-group select-container" style="margin-bottom: 0;">
+                        <label for="service" class="form-label">
+                            Type de service
+                        </label>
+                        <select class="form-select" id="service" name="service">
+                            <option value="all" {% if service_filter == 'all' %}selected{% endif %}>Tous les services</option>
+                            {% for value, label in service_types %}
+                                <option value="{{ value }}" {% if service_filter == value %}selected{% endif %}>{{ label }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Sénam K.
-                </h3>
-                
-                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    Bricolage
-                </p>
-                
-                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                    Disponible
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                    <div style="color: var(--warning);">★★★★★</div>
-                    <span style="font-weight: 500; margin-left: 0.25rem;">4.6</span>
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(89 avis)</span>
-                </div>
-                
-                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
-                    Lomé, Nyékonakpoè
-                </p>
-                
-                <button class="btn btn-primary btn-sm" style="width: 100%;">
-                    Voir le profil
-                </button>
-            </div>
-            
-            <!-- Provider 5 -->
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 80px; height: 80px; background: var(--secondary); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
-                        AL
+                    
+                    <div class="form-group select-container" style="margin-bottom: 0;">
+                        <label for="location" class="form-label">
+                            Ville
+                        </label>
+                        <select class="form-select" id="location" name="location">
+                            <option value="all" {% if location_filter == 'all' %}selected{% endif %}>Toutes les villes</option>
+                            {% for city in cities %}
+                                <option value="{{ city }}" {% if location_filter == city %}selected{% endif %}>{{ city }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Akosua L.
-                </h3>
-                
-                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    Livraison courses
-                </p>
-                
-                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                    Disponible
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                    <div style="color: var(--warning);">★★★★★</div>
-                    <span style="font-weight: 500; margin-left: 0.25rem;">4.9</span>
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(156 avis)</span>
-                </div>
-                
-                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
-                    Lomé, Tokoin
-                </p>
-                
-                <button class="btn btn-primary btn-sm" style="width: 100%;">
-                    Voir le profil
-                </button>
-            </div>
-            
-            <!-- Provider 6 -->
-            <div class="card scroll-animate" style="text-align: center;">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.5rem;">
-                        KE
+                    
+                    <div class="form-group select-container" style="margin-bottom: 0;">
+                        <label for="availability" class="form-label">
+                            Disponibilité
+                        </label>
+                        <select class="form-select" id="availability" name="availability">
+                            <option value="all" {% if availability_filter == 'all' %}selected{% endif %}>Tous</option>
+                            <option value="available" {% if availability_filter == 'available' %}selected{% endif %}>Disponibles</option>
+                        </select>
                     </div>
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
                 </div>
                 
-                <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Kodjo E.
-                </h3>
-                
-                <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    Plomberie
-                </p>
-                
-                <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                    Disponible
+                <div style="display: flex; gap: 1rem;">
+                    <button type="submit" class="btn btn-primary">
+                        Filtrer
+                    </button>
+                    <a href="{% url 'providers:providers' %}" class="btn btn-secondary">
+                        Réinitialiser
+                    </a>
                 </div>
-                
-                <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                    <div style="color: var(--warning);">★★★★☆</div>
-                    <span style="font-weight: 500; margin-left: 0.25rem;">4.5</span>
-                    <span style="color: var(--muted-foreground); font-size: 0.875rem;">(43 avis)</span>
-                </div>
-                
-                <p style="color: var(--muted-foreground); font-size: 0.875rem; margin-bottom: 1rem;">
-                    Lomé, Doulassamé
-                </p>
-                
-                <button class="btn btn-primary btn-sm" style="width: 100%;">
-                    Voir le profil
-                </button>
-            </div>
+            </form>
         </div>
-        
-        <!-- Load More -->
-        <div style="text-align: center; margin-top: 3rem;" class="scroll-animate">
-            <button class="btn btn-secondary btn-lg">
-                Voir plus de prestataires
-            </button>
-        </div>
-    </div>
-</section>
 
-<!-- CTA Section -->
-<section class="section" style="background: var(--muted);">
-    <div class="container" style="text-align: center;">
-        <div class="scroll-animate">
-            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">
-                Vous êtes un professionnel ?
-            </h2>
-            <p style="color: var(--muted-foreground); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-                Rejoignez notre réseau de prestataires qualifiés et développez votre activité avec Tog-Services
-            </p>
-            <a href="{% url 'providers:provider_register' %}" class="btn btn-primary btn-lg">
-                Devenir prestataire
-            </a>
+        <!-- Providers Grid -->
+        <div class="grid grid-3 scroll-animate providers-grid">
+            {% for provider in providers %}
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            {% if provider.user.userprofile.profile_picture %}
+                                <img src="{{ provider.user.userprofile.profile_picture.url }}" 
+                                     alt="{{ provider.user.get_full_name }}" 
+                                     style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            {% else %}
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+                                    {{ provider.user.first_name|slice:":1"|upper|default:"P" }}{{ provider.user.last_name|slice:":1"|upper|default:"" }}
+                                </div>
+                            {% endif %}
+                            
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0; font-weight: 600; font-size: 1.1rem;">
+                                    {{ provider.user.get_full_name|default:provider.user.username }}
+                                </h4>
+                                <p style="margin: 0; color: var(--text-muted); font-size: 0.875rem;">
+                                    {{ provider.get_service_type_display }}
+                                </p>
+                            </div>
+                            
+                            {% if provider.is_available %}
+                                <span class="badge badge-success">Disponible</span>
+                            {% else %}
+                                <span class="badge badge-secondary">Occupé</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    {% if provider.description %}
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.875rem;">
+                            {{ provider.description|truncatewords:15 }}
+                        </p>
+                    {% endif %}
+                    
+                    <!-- Stats -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 0.875rem;">
+                        <div>
+                            <strong>Expérience:</strong> {{ provider.experience_years }} ans
+                        </div>
+                        {% if provider.avg_rating %}
+                            <div style="color: var(--warning);">
+                                ⭐ {{ provider.avg_rating|floatformat:1 }} ({{ provider.total_reviews }})
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Location -->
+                    {% if provider.zones.all %}
+                        <div style="margin-bottom: 1rem;">
+                            <strong style="font-size: 0.75rem; color: var(--text-muted);">ZONES:</strong>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.25rem;">
+                                {% for zone in provider.zones.all|slice:":3" %}
+                                    <span style="font-size: 0.75rem; padding: 0.125rem 0.5rem; background: var(--background-alt); border-radius: var(--radius); color: var(--text-secondary);">
+                                        {{ zone.city }}
+                                    </span>
+                                {% endfor %}
+                                {% if provider.zones.all|length > 3 %}
+                                    <span style="font-size: 0.75rem; color: var(--text-muted);">
+                                        +{{ provider.zones.all|length|add:"-3" }} autres
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    
+                    <!-- Actions -->
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="{% url 'providers:provider_detail' provider.id %}" class="btn btn-primary btn-sm" style="flex: 1;">
+                            Voir Profil
+                        </a>
+                        {% if provider.hourly_rate %}
+                            <div class="btn btn-outline btn-sm" style="pointer-events: none;">
+                                {{ provider.hourly_rate }}€/h
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% empty %}
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+                    <h3 style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Aucun prestataire trouvé
+                    </h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        Essayez d'ajuster vos filtres ou 
+                        <a href="{% url 'providers:providers' %}" style="color: var(--primary);">voir tous les prestataires</a>
+                    </p>
+                    
+                    <div style="background: var(--background-alt); padding: 2rem; border-radius: var(--radius-lg); max-width: 400px; margin: 0 auto;">
+                        <h4 style="margin-bottom: 1rem;">Vous êtes prestataire ?</h4>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Rejoignez notre réseau et commencez à recevoir des commandes dès aujourd'hui
+                        </p>
+                        <a href="{% url 'providers:provider_register' %}" class="btn btn-primary">
+                            Devenir Prestataire
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
+
+        <!-- Results Summary with Animation -->
+        {% if providers %}
+            <div style="text-align: center; margin-top: 2rem;" class="scroll-animate">
+                <p style="color: var(--text-muted);">
+                    Affichage de <span class="results-counter">{{ displayed_count }}</span> 
+                    {% if not show_all and total_providers > displayed_count %}
+                        sur {{ total_providers }} prestataires
+                    {% else %}
+                        prestataire{{ displayed_count|pluralize }}
+                    {% endif %}
+                </p>
+            </div>
+        {% endif %}
+
+        <!-- Load More / Show Less Button -->
+        {% if not show_all and total_providers > displayed_count %}
+            <div style="text-align: center; margin-top: 1rem;" class="scroll-animate">
+                <a href="?show_all=true{% if service_filter != 'all' %}&service={{ service_filter }}{% endif %}{% if location_filter != 'all' %}&location={{ location_filter }}{% endif %}{% if availability_filter != 'all' %}&availability={{ availability_filter }}{% endif %}" 
+                   class="btn btn-primary btn-lg">
+                    Voir tous les prestataires
+                </a>
+            </div>
+        {% elif show_all and total_providers > 6 %}
+            <div style="text-align: center; margin-top: 1rem;" class="scroll-animate">
+                <a href="?{% if service_filter != 'all' %}service={{ service_filter }}{% endif %}{% if location_filter != 'all' %}{% if service_filter != 'all' %}&{% endif %}location={{ location_filter }}{% endif %}{% if availability_filter != 'all' %}{% if service_filter != 'all' or location_filter != 'all' %}&{% endif %}availability={{ availability_filter }}{% endif %}" 
+                   class="btn btn-outline">
+                    Voir moins de prestataires
+                </a>
+            </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %} 

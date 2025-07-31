@@ -349,3 +349,1270 @@ Watching for file changes with StatReloader
 "GET /login/ HTTP/1.1" 200 11772
 "GET /services/ HTTP/1.1" 200 19377
 "GET /static/css/style.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 11772
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 17545
+"GET /providers/list/ HTTP/1.1" 200 21570
+"GET /providers/list/ HTTP/1.1" 200 21570
+"GET /login/ HTTP/1.1" 200 11772
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 14502
+"GET /providers/register/ HTTP/1.1" 200 15516
+"GET / HTTP/1.1" 200 17545
+"GET /login/ HTTP/1.1" 200 11772
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 14502
+"GET /providers/register/ HTTP/1.1" 200 15516
+"GET /providers/list/ HTTP/1.1" 200 21570
+"GET /support/ HTTP/1.1" 200 22589
+"GET /services/ HTTP/1.1" 200 19377
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\providers\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\providers\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /services/ HTTP/1.1" 200 19372
+"GET /static/css/style.css HTTP/1.1" 200 14833
+"GET / HTTP/1.1" 200 49255
+"GET /static/css/style.css HTTP/1.1" 304 0
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /services/ HTTP/1.1" 200 19372
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 21565
+"GET /login/ HTTP/1.1" 200 11761
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 200 14111
+"GET /register/ HTTP/1.1" 200 16421
+Watching for file changes with StatReloader
+"GET /register/ HTTP/1.1" 200 16421
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 49678
+"GET /login/ HTTP/1.1" 200 11761
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 16421
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4235
+"GET /static/admin/css/base.css HTTP/1.1" 200 22092
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 5968
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+Not Found: /admin/dashboard/admin_dashboard
+"GET /admin/dashboard/admin_dashboard HTTP/1.1" 404 5475
+Not Found: /dashboard/admin_dashboard
+"GET /dashboard/admin_dashboard HTTP/1.1" 404 7306
+Not Found: /dashboard/admin_dashboard/
+"GET /dashboard/admin_dashboard/ HTTP/1.1" 404 7309
+"GET / HTTP/1.1" 200 53351
+"GET /static/css/style.css HTTP/1.1" 200 22720
+"GET /static/js/main.js HTTP/1.1" 200 13361
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 27916
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /profile/ HTTP/1.1" 200 24580
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /orders/ HTTP/1.1" 200 23957
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /orders/ HTTP/1.1" 200 23496
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 23007
+"GET / HTTP/1.1" 200 52890
+"GET / HTTP/1.1" 200 52890
+"GET /static/css/style.css HTTP/1.1" 200 22741
+"GET /static/js/main.js HTTP/1.1" 200 12984
+"GET / HTTP/1.1" 200 51175
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 200 12173
+Not Found: /dashboard/admin_dashboard/
+"GET /dashboard/admin_dashboard/ HTTP/1.1" 404 7309
+C:\Users\Admin\Desktop\togo\dashboard\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\dashboard\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 51175
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /dashboard/admin HTTP/1.1" 301 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34924
+C:\Users\Admin\Desktop\togo\dashboard\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /dashboard/admin/ HTTP/1.1" 200 34924
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 200 20946
+"GET /dashboard/admin/ HTTP/1.1" 200 34924
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34924
+"GET /static/css/style.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 51175
+"GET /static/js/main.js HTTP/1.1" 200 12173
+"GET /static/css/style.css HTTP/1.1" 200 20946
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /login/ HTTP/1.1" 200 13258
+"GET /register/ HTTP/1.1" 200 17918
+"GET /support/ HTTP/1.1" 200 24504
+"GET /providers/ HTTP/1.1" 200 23485
+"GET /services/ HTTP/1.1" 200 21292
+"GET /services/ HTTP/1.1" 200 21292
+"GET / HTTP/1.1" 200 51175
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 51275
+"GET /static/css/style.css HTTP/1.1" 200 26579
+"GET /static/js/main.js HTTP/1.1" 200 6002
+"GET /login/ HTTP/1.1" 200 13358
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 18018
+"GET /services/ HTTP/1.1" 200 21392
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 21392
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 23585
+"GET /support/ HTTP/1.1" 200 24604
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 21392
+"GET / HTTP/1.1" 200 51275
+"GET /services/ HTTP/1.1" 200 21392
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 23585
+"GET /providers/ HTTP/1.1" 200 23585
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+C:\Users\Admin\Desktop\togo\providers\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\services\views.py changed, reloading.
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /register/
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /login/
+"GET /providers/ HTTP/1.1" 200 73946
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 200 27442
+"GET / HTTP/1.1" 200 51275
+"GET /login/ HTTP/1.1" 200 13358
+"GET /register/ HTTP/1.1" 200 20629
+"GET /providers/ HTTP/1.1" 200 73946
+"GET /providers/ HTTP/1.1" 200 73946
+"GET /static/css/style.css HTTP/1.1" 200 34145
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/?service=all&location=all&availability=all HTTP/1.1" 200 73946
+"GET /providers/ HTTP/1.1" 200 73946
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/13/ HTTP/1.1" 200 15969
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 73946
+C:\Users\Admin\Desktop\togo\providers\views.py changed, reloading.
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /providers/
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 200 38447
+"GET /providers/?service=menage&location=all&availability=all HTTP/1.1" 200 25535
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 13358
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 22595
+"GET /login/ HTTP/1.1" 200 13358
+"GET /static/css/style.css HTTP/1.1" 304 0
+"POST /login/ HTTP/1.1" 200 13842
+"GET /static/css/style.css HTTP/1.1" 304 0
+C:\Users\Admin\Desktop\togo\users\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 51275
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /support/ HTTP/1.1" 200 24604
+Internal Server Error: /services/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\services\views.py", line 63, in services_list
+    return render(request, 'services.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1930, in _fetch_all
+    self._prefetch_related_objects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1320, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 2355, in prefetch_related_objects
+    raise AttributeError(
+    ...<7 lines>...
+    )
+AttributeError: Cannot find 'serviceimage_set' on Service object, 'serviceimage_set' is an invalid parameter to prefetch_related()
+"GET /services/ HTTP/1.1" 500 208427
+"GET /favicon.ico HTTP/1.1" 301 0
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET / HTTP/1.1" 200 51275
+"GET /static/css/style.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 51275
+"GET /static/css/style.css HTTP/1.1" 200 38447
+"GET /static/js/main.js HTTP/1.1" 200 6002
+Internal Server Error: /services/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\services\views.py", line 63, in services_list
+    return render(request, 'services.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1930, in _fetch_all
+    self._prefetch_related_objects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1320, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 2355, in prefetch_related_objects
+    raise AttributeError(
+    ...<7 lines>...
+    )
+AttributeError: Cannot find 'serviceimage_set' on Service object, 'serviceimage_set' is an invalid parameter to prefetch_related()
+"GET /services/ HTTP/1.1" 500 215499
+"GET /providers/ HTTP/1.1" 200 37867
+Internal Server Error: /services/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\services\views.py", line 63, in services_list
+    return render(request, 'services.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1930, in _fetch_all
+    self._prefetch_related_objects()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1320, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 2355, in prefetch_related_objects
+    raise AttributeError(
+    ...<7 lines>...
+    )
+AttributeError: Cannot find 'serviceimage_set' on Service object, 'serviceimage_set' is an invalid parameter to prefetch_related()
+"GET /services/ HTTP/1.1" 500 215499
+C:\Users\Admin\Desktop\togo\services\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\services\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /services/ HTTP/1.1" 200 73555
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 73555
+C:\Users\Admin\Desktop\togo\services\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /services/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\services\views.py", line 50, in services_list
+    services = services.annotate(
+        avg_rating=Avg('reviews__rating'),
+        total_reviews=Count('reviews', distinct=True)
+    )
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        annotation,
+        ^^^^^^^^^^^
+        alias,
+        ^^^^^^
+        select=select,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1194, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\expressions.py", line 1073, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        query, allow_joins, reuse, summarize, for_save
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\expressions.py", line 895, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 2010, in resolve_ref
+    join_info = self.setup_joins(
+        field_list, self.get_meta(), self.get_initial_alias(), can_reuse=reuse
+    )
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1863, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ~~~~~~~~~~~~~~~~~~^
+        names[:pivot],
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        fail_on_missing=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+    ...<2 lines>...
+    )
+django.core.exceptions.FieldError: Cannot resolve keyword 'reviews' into field. Choices are: availability, base_price, category, category_id, created_at, description, duration_minutes, featured, id, images, is_active, is_bookable, is_instant, max_advance_days, max_price, min_price, orders, pricing_type, provider, provider_id, title, updated_at
+"GET /services/ HTTP/1.1" 500 130129
+C:\Users\Admin\Desktop\togo\services\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /services/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'Service' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\services\views.py", line 78, in services_list
+    return render(request, 'services.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 718, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Admin\Desktop\togo\services\models.py", line 63, in total_reviews
+    return self.reviews.count()
+           ^^^^^^^^^^^^
+AttributeError: 'Service' object has no attribute 'reviews'
+"GET /services/ HTTP/1.1" 500 224080
+C:\Users\Admin\Desktop\togo\services\models.py changed, reloading.
+C:\Users\Admin\Desktop\togo\services\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /services/ HTTP/1.1" 200 39369
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 200 39631
+"GET / HTTP/1.1" 200 51275
+"GET / HTTP/1.1" 200 51275
+"GET /static/css/style.css HTTP/1.1" 200 42634
+"GET / HTTP/1.1" 200 51174
+"GET /static/css/style.css HTTP/1.1" 200 47480
+"GET / HTTP/1.1" 200 50874
+"GET /static/css/style.css HTTP/1.1" 200 42396
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 50874
+"GET /static/css/style.css HTTP/1.1" 200 13952
+"GET / HTTP/1.1" 200 50874
+"GET /static/css/style.css HTTP/1.1" 200 42438
+"GET / HTTP/1.1" 200 50874
+"GET /static/css/style.css HTTP/1.1" 200 14487
+"GET / HTTP/1.1" 200 50874
+"GET /static/css/style.css HTTP/1.1" 304 0
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\users\views.py", line 39, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'services_list' not found. 'services_list' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 190417
+"GET / HTTP/1.1" 200 15962
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 15338
+"GET /static/css/style.css HTTP/1.1" 200 21137
+"GET /services/ HTTP/1.1" 200 38745
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37243
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 23980
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34400
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /dashboard/admin/ HTTP/1.1" 200 35024
+"GET /static/css/style.css HTTP/1.1" 200 17488
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39369
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24604
+"GET /static/css/style.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET /support/ HTTP/1.1" 200 24604
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24604
+"GET /support/ HTTP/1.1" 200 24604
+"GET /support/ HTTP/1.1" 200 24604
+"GET /support/ HTTP/1.1" 200 24604
+"GET /support/ HTTP/1.1" 200 24604
+"GET /support/ HTTP/1.1" 200 24604
+"GET / HTTP/1.1" 200 15962
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 35024
+"GET /register/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 35024
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 15962
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 200 17488
+"GET /services/ HTTP/1.1" 200 39369
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /static/css/style.css HTTP/1.1" 200 37388
+"GET / HTTP/1.1" 200 15962
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24604
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15428
+"GET /register/ HTTP/1.1" 200 25901
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 200 21634
+"GET /login/ HTTP/1.1" 200 15428
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15428
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 25901
+"GET /support/ HTTP/1.1" 200 24604
+"GET /providers/ HTTP/1.1" 200 37867
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39369
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 15962
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+Internal Server Error: /services/
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\fields\__init__.py", line 2123, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'transport'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\services\views.py", line 23, in services_list
+    services = services.filter(category_id=category_filter)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\sql\query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\fields\related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\db\models\fields\__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+ValueError: Field 'id' expected a number but got 'transport'.
+"GET /services/?category=transport HTTP/1.1" 500 137654
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 200 22375
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/css/style.css HTTP/1.1" 200 22375
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /providers/ HTTP/1.1" 200 37582
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 200 23296
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15143
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15143
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39084
+"GET /register/ HTTP/1.1" 200 25616
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 25616
+"GET /static/css/style.css HTTP/1.1" 200 22641
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39084
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39084
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/?show_all=true HTTP/1.1" 200 74084
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39084
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15143
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /services/ HTTP/1.1" 200 39084
+"GET /services/ HTTP/1.1" 200 35118
+"GET /static/css/style.css HTTP/1.1" 200 29464
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 41142
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 41142
+"GET /static/css/style.css HTTP/1.1" 200 29315
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 41142
+"GET /static/css/style.css HTTP/1.1" 200 17488
+"GET /login/ HTTP/1.1" 200 15143
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 200 34193
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /services/ HTTP/1.1" 200 35118
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 41142
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16460
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 15143
+"GET /register/ HTTP/1.1" 200 25616
+"GET / HTTP/1.1" 200 16460
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 200 34214
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7261
+"GET /login/ HTTP/1.1" 200 15143
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 200 25616
+"GET /register/ HTTP/1.1" 200 25616
+"GET /static/css/style.css HTTP/1.1" 200 34214
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /services/ HTTP/1.1" 200 39084
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /support/ HTTP/1.1" 200 24319
+"GET /login/ HTTP/1.1" 200 15143
+"GET /static/css/style.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 200 34214
+"GET /services/ HTTP/1.1" 200 39084
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /support/ HTTP/1.1" 200 24319
+"GET /static/css/style.css HTTP/1.1" 200 35722
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /services/ HTTP/1.1" 200 39084
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16460
+"GET /static/css/style.css HTTP/1.1" 200 35722
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /services/ HTTP/1.1" 200 39084
+"GET /providers/ HTTP/1.1" 200 37582
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24319
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34739
+"GET /dashboard/admin/ HTTP/1.1" 200 34739
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16460
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16600
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style.css HTTP/1.1" 200 35692
+"GET /services/ HTTP/1.1" 200 39224
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37722
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /support/ HTTP/1.1" 200 24459
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37722
+"GET /services/ HTTP/1.1" 200 39224
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39230
+"GET /static/css/style-fixed.css HTTP/1.1" 200 22521
+"GET /static/css/style.css HTTP/1.1" 200 35692
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /services/?category=3&location=all&price=all HTTP/1.1" 200 30725
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /services/ HTTP/1.1" 200 39230
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /providers/ HTTP/1.1" 200 37728
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16606
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39230
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 200 22521
+"GET /providers/ HTTP/1.1" 200 37728
+"GET /providers/ HTTP/1.1" 200 37728
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /register/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16861
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16606
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 460
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET / HTTP/1.1" 200 16606
+"GET /register/ HTTP/1.1" 200 672
+"GET / HTTP/1.1" 200 16606
+"GET / HTTP/1.1" 200 16606
+"GET /static/css/style-fixed.css HTTP/1.1" 200 22521
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/css/style.css HTTP/1.1" 200 35692
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /login/ HTTP/1.1" 200 460
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16606
+"GET /static/css/style.css HTTP/1.1" 200 35692
+"GET /static/css/style-fixed.css HTTP/1.1" 200 22521
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET / HTTP/1.1" 200 16606
+"GET /static/css/style.css HTTP/1.1" 200 35692
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/css/style-fixed.css HTTP/1.1" 200 22521
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /services/ HTTP/1.1" 200 39230
+"GET /services/?category=3&location=all&price=all HTTP/1.1" 200 30725
+"GET /providers/ HTTP/1.1" 200 37728
+"GET /support/ HTTP/1.1" 200 24465
+"GET /login/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /register/ HTTP/1.1" 302 0
+"GET /dashboard-redirect/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /dashboard/admin/ HTTP/1.1" 200 34885
+"GET /services/ HTTP/1.1" 200 39230
+"GET /providers/ HTTP/1.1" 200 37728
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Admin\Desktop\togo\users\views.py", line 22, in home
+    return render(request, 'home.html', context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search_services' not found. 'search_services' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 168562
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 14862
+"GET /register/ HTTP/1.1" 200 23685
+"GET /login/ HTTP/1.1" 200 14862
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 200 23157
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style-fixed.css HTTP/1.1" 200 23157
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style.css HTTP/1.1" 200 35692
+"GET /static/js/main.js HTTP/1.1" 200 4704
+"GET /static/css/style-fixed.css HTTP/1.1" 200 23157
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /register/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /register/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /register/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+"GET /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16423
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

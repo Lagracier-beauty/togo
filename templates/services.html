@@ -20,228 +20,189 @@
 <!-- Filters Section -->
 <section class="section" style="padding-top: 0; padding-bottom: var(--space-10);">
     <div class="container">
-        <div class="card scroll-animate" style="margin-bottom: 2rem;">
+        <div class="card card-with-select scroll-animate" style="margin-bottom: 2rem; position: relative; z-index: 10;">
+            <h3 style="margin-bottom: 1.5rem; font-weight: 600;">
+                Filtrer les services
+            </h3>
+            
             <form method="GET" style="all: unset; display: block;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                    <div class="form-group" style="margin-bottom: 0;">
+                    <div class="form-group select-container" style="margin-bottom: 0;">
                         <label for="category" class="form-label">
                             Catégorie
                         </label>
-                        <select class="form-input" id="category" name="category">
-                            <option value="">Toutes les catégories</option>
-                            <option value="livraison">Livraison Express</option>
-                            <option value="courses">Courses & Livraison</option>
-                            <option value="transport">Transport</option>
-                            <option value="menage">Ménage & Nettoyage</option>
-                            <option value="bricolage">Bricolage & Réparations</option>
-                            <option value="jardinage">Jardinage</option>
-                            <option value="cuisine">Cuisine & Traiteur</option>
+                        <select class="form-select" id="category" name="category">
+                            <option value="all">Toutes les catégories</option>
+                            {% for category in categories %}
+                                <option value="{{ category.id }}" {% if category_filter == category.id|stringformat:"s" %}selected{% endif %}>
+                                    {{ category.name }}
+                                </option>
+                            {% endfor %}
                         </select>
                     </div>
                     
-                    <div class="form-group" style="margin-bottom: 0;">
+                    <div class="form-group select-container" style="margin-bottom: 0;">
                         <label for="location" class="form-label">
-                            Localisation
+                            Ville
                         </label>
-                        <input 
-                            type="text" 
-                            class="form-input" 
-                            id="location" 
-                            name="location" 
-                            placeholder="Ville ou quartier"
-                        >
+                        <select class="form-select" id="location" name="location">
+                            <option value="all">Toutes les villes</option>
+                            {% for city in cities %}
+                                <option value="{{ city }}" {% if location_filter == city %}selected{% endif %}>{{ city }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                     
-                    <div class="form-group" style="margin-bottom: 0;">
-                        <label for="availability" class="form-label">
-                            Disponibilité
+                    <div class="form-group select-container" style="margin-bottom: 0;">
+                        <label for="price" class="form-label">
+                            Prix
                         </label>
-                        <select class="form-input" id="availability" name="availability">
-                            <option value="">Toutes</option>
-                            <option value="available">Disponible maintenant</option>
-                            <option value="today">Disponible aujourd'hui</option>
-                            <option value="tomorrow">Disponible demain</option>
+                        <select class="form-select" id="price" name="price">
+                            <option value="all">Tous les prix</option>
+                            <option value="0-25" {% if price_filter == '0-25' %}selected{% endif %}>0 - 25€</option>
+                            <option value="25-50" {% if price_filter == '25-50' %}selected{% endif %}>25 - 50€</option>
+                            <option value="50-100" {% if price_filter == '50-100' %}selected{% endif %}>50 - 100€</option>
+                            <option value="100+" {% if price_filter == '100+' %}selected{% endif %}>100€+</option>
                         </select>
                     </div>
                 </div>
                 
-                <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
-                    <button type="reset" class="btn btn-secondary">
-                        Réinitialiser
-                    </button>
+                <div style="display: flex; gap: 1rem;">
                     <button type="submit" class="btn btn-primary">
-                        Rechercher
+                        Filtrer
                     </button>
+                    <a href="{% url 'services:services' %}" class="btn btn-secondary">
+                        Réinitialiser
+                    </a>
                 </div>
             </form>
         </div>
-        
-        <!-- Results Header -->
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;" class="scroll-animate">
-            <div>
-                <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.25rem;">
-                    Prestataires disponibles
-                </h2>
-                <p style="color: var(--muted-foreground); font-size: 0.875rem;">
-                    12 prestataires trouvés
+
+        <!-- Services Grid -->
+        <div class="grid grid-3 scroll-animate services-grid">
+            {% for service in services %}
+                <div class="card">
+                    {% if service.images.first %}
+                        <img src="{{ service.images.first.image.url }}" 
+                             alt="{{ service.title }}" 
+                             style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius); margin-bottom: 1rem;">
+                    {% endif %}
+                    
+                    <div class="card-header">
+                        <div style="display: flex; align-items: start; justify-content: space-between; margin-bottom: 1rem;">
+                            <div style="flex: 1;">
+                                <h4 style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1.1rem;">
+                                    {{ service.title }}
+                                </h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                                    {{ service.category.name }}
+                                </p>
+                            </div>
+                            
+                            <div style="text-align: right;">
+                                {% if service.pricing_type == 'fixed' %}
+                                    <span style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">
+                                        {{ service.base_price }} FCFA
+                                    </span>
+                                {% else %}
+                                    <span style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">
+                                        {{ service.min_price }}-{{ service.max_price }} FCFA
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.4;">
+                            {{ service.description|truncatewords:20 }}
+                        </p>
+                        
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                                    {% for i in "12345" %}
+                                        {% if forloop.counter <= service.average_rating|default:0 %}
+                                            <span style="color: #fbbf24;">★</span>
+                                        {% else %}
+                                            <span style="color: var(--border);">★</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">
+                                    ({{ service.total_reviews }} avis)
+                                </span>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="display: inline-block; width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></span>
+                                <span style="color: var(--text-muted); font-size: 0.85rem;">
+                                    {{ service.provider.user.get_full_name }}
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-primary" style="flex: 1;">
+                                Commander
+                            </button>
+                            <button class="btn btn-outline">
+                                Détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
+                    <h3 style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Aucun service trouvé
+                    </h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        Essayez d'ajuster vos filtres ou 
+                        <a href="{% url 'services:services' %}" style="color: var(--primary);">voir tous les services</a>
+                    </p>
+                    
+                    <div style="background: var(--background-alt); padding: 2rem; border-radius: var(--radius-lg); max-width: 400px; margin: 0 auto;">
+                        <h4 style="margin-bottom: 1rem;">Vous êtes prestataire ?</h4>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            Rejoignez notre réseau et proposez vos services dès aujourd'hui
+                        </p>
+                        <a href="{% url 'providers:provider_register' %}" class="btn btn-primary">
+                            Devenir Prestataire
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Results Summary with Animation -->
+        {% if services %}
+            <div style="text-align: center; margin-top: 2rem;" class="scroll-animate">
+                <p style="color: var(--text-muted);">
+                    Affichage de <span class="results-counter">{{ displayed_count }}</span> 
+                    {% if not show_all and total_services > displayed_count %}
+                        sur {{ total_services }} services
+                    {% else %}
+                        service{{ displayed_count|pluralize }}
+                    {% endif %}
                 </p>
             </div>
-            
-            <select class="form-input" style="width: auto; margin-bottom: 0;">
-                <option>Trier par pertinence</option>
-                <option>Note la plus élevée</option>
-                <option>Prix croissant</option>
-                <option>Plus récent</option>
-            </select>
-        </div>
-        
-        <!-- Services Grid -->
-        <div class="grid grid-3">
-            <!-- Service Card 1 -->
-            <div class="card scroll-animate">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <img 
-                        src="https://randomuser.me/api/portraits/men/32.jpg" 
-                        alt="Kossi A." 
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
-                    >
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <div style="text-align: center; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                        Kossi A.
-                    </h3>
-                    
-                    <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                        Livraison de repas
-                    </p>
-                    
-                    <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                        Disponible maintenant
-                    </div>
-                    
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                        <div style="color: var(--warning);">★★★★★</div>
-                        <span style="font-weight: 500; margin-left: 0.25rem;">4.8</span>
-                        <span style="color: var(--muted-foreground); font-size: 0.875rem;">(120 avis)</span>
-                    </div>
-                    
-                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
-                        Lomé, Agoè • 2.5 km
-                    </p>
-                </div>
-                
-                <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                        <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
-                        <span style="font-weight: 600; color: var(--foreground);">2 000 FCFA</span>
-                    </div>
-                    <button class="btn btn-primary btn-sm" style="width: 100%;">
-                        Voir le profil
-                    </button>
-                </div>
+        {% endif %}
+
+        <!-- Load More / Show Less Button -->
+        {% if not show_all and total_services > displayed_count %}
+            <div style="text-align: center; margin-top: 1rem;" class="scroll-animate">
+                <a href="?show_all=true{% if category_filter != 'all' %}&category={{ category_filter }}{% endif %}{% if location_filter != 'all' %}&location={{ location_filter }}{% endif %}{% if price_filter != 'all' %}&price={{ price_filter }}{% endif %}" 
+                    class="btn btn-primary btn-lg">
+                    Voir tous les services
+                </a>
             </div>
-            
-            <!-- Service Card 2 -->
-            <div class="card scroll-animate">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <img 
-                        src="https://randomuser.me/api/portraits/women/44.jpg" 
-                        alt="Ama D." 
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
-                    >
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--success); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <div style="text-align: center; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                        Ama D.
-                    </h3>
-                    
-                    <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                        Ménage & Nettoyage
-                    </p>
-                    
-                    <div style="display: inline-flex; align-items: center; background: rgba(16, 185, 129, 0.1); color: var(--success); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                        Disponible aujourd'hui
-                    </div>
-                    
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                        <div style="color: var(--warning);">★★★★★</div>
-                        <span style="font-weight: 500; margin-left: 0.25rem;">4.9</span>
-                        <span style="color: var(--muted-foreground); font-size: 0.875rem;">(98 avis)</span>
-                    </div>
-                    
-                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
-                        Lomé, Adidogomé • 1.8 km
-                    </p>
-                </div>
-                
-                <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                        <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
-                        <span style="font-weight: 600; color: var(--foreground);">5 000 FCFA</span>
-                    </div>
-                    <button class="btn btn-primary btn-sm" style="width: 100%;">
-                        Voir le profil
-                    </button>
-                </div>
+        {% elif show_all and total_services > 6 %}
+            <div style="text-align: center; margin-top: 1rem;" class="scroll-animate">
+                <a href="?{% if category_filter != 'all' %}category={{ category_filter }}{% endif %}{% if location_filter != 'all' %}{% if category_filter != 'all' %}&{% endif %}location={{ location_filter }}{% endif %}{% if price_filter != 'all' %}{% if category_filter != 'all' or location_filter != 'all' %}&{% endif %}price={{ price_filter }}{% endif %}" 
+                    class="btn btn-outline">
+                    Voir moins de services
+                </a>
             </div>
-            
-            <!-- Service Card 3 -->
-            <div class="card scroll-animate">
-                <div style="position: relative; margin-bottom: 1rem;">
-                    <img 
-                        src="https://randomuser.me/api/portraits/men/54.jpg" 
-                        alt="Yawovi K." 
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block;"
-                    >
-                    <div style="position: absolute; bottom: -4px; right: calc(50% - 48px); width: 16px; height: 16px; background: var(--warning); border: 2px solid var(--background); border-radius: 50%;"></div>
-                </div>
-                
-                <div style="text-align: center; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem;">
-                        Yawovi K.
-                    </h3>
-                    
-                    <p style="color: var(--muted-foreground); margin-bottom: 0.5rem; font-size: 0.875rem;">
-                        Transport (Moto)
-                    </p>
-                    
-                    <div style="display: inline-flex; align-items: center; background: rgba(245, 158, 11, 0.1); color: var(--warning); padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem;">
-                        Occuppé
-                    </div>
-                    
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.25rem; margin-bottom: 0.5rem;">
-                        <div style="color: var(--warning);">★★★★☆</div>
-                        <span style="font-weight: 500; margin-left: 0.25rem;">4.7</span>
-                        <span style="color: var(--muted-foreground); font-size: 0.875rem;">(75 avis)</span>
-                    </div>
-                    
-                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
-                        Lomé, Bè • 3.2 km
-                    </p>
-                </div>
-                
-                <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                        <span style="font-size: 0.875rem; color: var(--muted-foreground);">À partir de</span>
-                        <span style="font-weight: 600; color: var(--foreground);">1 500 FCFA</span>
-                    </div>
-                    <button class="btn btn-secondary btn-sm" style="width: 100%;" disabled>
-                        Indisponible
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Load More -->
-        <div style="text-align: center; margin-top: 3rem;" class="scroll-animate">
-            <button class="btn btn-secondary btn-lg">
-                Charger plus de services
-            </button>
-        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %} 

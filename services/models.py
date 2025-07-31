@@ -53,14 +53,16 @@ class Service(models.Model):
 
     @property
     def average_rating(self):
-        ratings = self.reviews.all()
+        """Calcule la note moyenne basée sur les évaluations des commandes"""
+        ratings = self.orders.filter(rating__customer_rating__isnull=False).values_list('rating__customer_rating', flat=True)
         if ratings:
-            return sum(r.rating for r in ratings) / len(ratings)
+            return sum(ratings) / len(ratings)
         return 0
 
     @property
     def total_reviews(self):
-        return self.reviews.count()
+        """Compte le nombre total d'avis clients"""
+        return self.orders.filter(rating__customer_rating__isnull=False).count()
 
 class ServiceImage(models.Model):
     """Images des services"""

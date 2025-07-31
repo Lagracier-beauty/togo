@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Test Page - Tog-Services{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="card">
+            <h1 style="text-align: center; color: #2563eb; margin-bottom: 2rem;">🧪 Page de Test Django</h1>
+            
+            <div style="background: #10b981; color: white; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
+                ✅ Django fonctionne correctement !
+            </div>
+            
+            <div class="debug-info">
+                <h3>Informations de Test :</h3>
+                <p><strong>Timestamp :</strong> {{ now }}</p>
+                <p><strong>User Agent :</strong> {{ debug_info.user_agent }}</p>
+                <p><strong>IP :</strong> {{ debug_info.ip }}</p>
+                <p><strong>Méthode :</strong> {{ debug_info.method }}</p>
+                <p><strong>Chemin :</strong> {{ debug_info.path }}</p>
+            </div>
+            
+                             <div class="debug-info">
+                     <h3>Liens de Test :</h3>
+                     <ul>
+                         <li><a href="/login/">Page Login (URL directe)</a></li>
+                         <li><a href="/register/">Page Register (URL directe)</a></li>
+                         <li><a href="{% url 'users:login' %}">Page Login (Django URL)</a></li>
+                         <li><a href="{% url 'users:register' %}">Page Register (Django URL)</a></li>
+                         <li><a href="/services/">Page Services</a></li>
+                         <li><a href="/providers/">Page Providers</a></li>
+                         <li><a href="/support/">Page Support</a></li>
+                     </ul>
+                 </div>
+            
+            <div class="debug-info">
+                <h3>Diagnostic :</h3>
+                <p>✅ Django fonctionne</p>
+                <p>✅ Les templates fonctionnent</p>
+                <p>✅ Le serveur répond</p>
+                <p>✅ Le CSS de debug fonctionne</p>
+                <p>❓ Le problème vient du CSS principal ou des variables CSS</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
