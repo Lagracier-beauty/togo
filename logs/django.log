@@ -1805,3 +1805,9 @@ Not Found: /users/
 "GET /users/ HTTP/1.1" 404 5453
 "GET /static/favicon.ico HTTP/1.1" 404 1960
 "GET / HTTP/1.1" 200 16593
+"GET /services/ HTTP/1.1" 200 39408
+"GET /providers/ HTTP/1.1" 200 37910
+"GET /support/ HTTP/1.1" 200 24635
+"GET /login/ HTTP/1.1" 200 15381
+"GET /register/ HTTP/1.1" 200 25801
+"GET / HTTP/1.1" 200 16593
