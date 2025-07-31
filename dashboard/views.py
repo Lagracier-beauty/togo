@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.db.models import Count
@@ -12,11 +12,14 @@ def is_admin(user):
     return user.is_authenticated and (user.is_staff or user.is_superuser)
 
 @login_required
-@user_passes_test(is_admin, login_url='/login/', redirect_field_name=None)
 def admin_dashboard(request):
     """Tableau de bord administrateur - SÉCURISÉ"""
     
-    # Double vérification de sécurité
+    # Vérification de connexion
+    if not request.user.is_authenticated:
+        return redirect('/users/login/')
+    
+    # Vérification de sécurité admin
     if not (request.user.is_staff or request.user.is_superuser):
         messages.error(request, "Accès refusé. Vous devez être administrateur pour accéder à cette page.")
         return redirect('users:home')

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4v)@2p$9_)y4s1_df&a&kv%84o((+sdgx6l!4&$d8aue7ldyk*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
 
 
 # Application definition
@@ -220,6 +220,11 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB
 # Session settings
 SESSION_COOKIE_AGE = 86400  # 24 heures
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+# Authentication settings
+LOGIN_URL = '/users/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Cache (optionnel, pour améliorer les performances)
 CACHES = {

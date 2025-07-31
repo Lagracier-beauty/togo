@@ -1673,3 +1673,135 @@ Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 17028
 "GET /logout/ HTTP/1.1" 302 0
 "GET / HTTP/1.1" 200 16846
+"GET / HTTP/1.1" 200 16605
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /services/ HTTP/1.1" 200 39420
+"GET /services/?category=3&location=all&price=all HTTP/1.1" 200 30915
+C:\Users\Admin\Desktop\togo\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /services/?category=3&location=all&price=all HTTP/1.1" 200 30915
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+C:\Users\Admin\Desktop\togo\togo_service\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+C:\Users\Admin\Desktop\togo\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /dashboard/admin/
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /dashboard/admin/
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /dashboard/admin/
+C:\Users\Admin\Desktop\togo\togo_service\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/dashboard/admin/ HTTP/1.1" 404 5503
+"GET / HTTP/1.1" 200 16605
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /users/login/
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 404 5494
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /users/login/
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 404 5494
+C:\Users\Admin\Desktop\togo\togo_service\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16641
+"GET /services/ HTTP/1.1" 200 39450
+"GET /providers/ HTTP/1.1" 200 37952
+"GET /support/ HTTP/1.1" 200 24677
+"GET /users/login/ HTTP/1.1" 200 15429
+"GET /users/register/ HTTP/1.1" 200 25849
+"GET /users/ HTTP/1.1" 200 16641
+Not Found: /users/dashboard/admin
+"GET /users/dashboard/admin HTTP/1.1" 404 7065
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 200 15429
+"POST /users/login/?next=/dashboard/admin/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 17270
+"GET /users/ HTTP/1.1" 200 17052
+"GET /users/logout/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 16882
+"GET /users/ HTTP/1.1" 200 16641
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 200 15429
+"POST /users/login/?next=/dashboard/admin/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 17270
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /users/ HTTP/1.1" 200 17052
+"GET /users/logout/ HTTP/1.1" 302 0
+"GET /users/ HTTP/1.1" 200 16882
+"GET /users/ HTTP/1.1" 200 16641
+Watching for file changes with StatReloader
+"GET /users/ HTTP/1.1" 200 16629
+"GET /static/css/style.css HTTP/1.1" 200 37442
+"GET /static/css/style-fixed.css HTTP/1.1" 200 23157
+"GET /static/js/main.js HTTP/1.1" 200 4869
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /services/ HTTP/1.1" 200 39438
+"GET /providers/ HTTP/1.1" 200 37940
+"GET /support/ HTTP/1.1" 200 24665
+"GET /users/login/ HTTP/1.1" 200 15417
+"GET /users/register/ HTTP/1.1" 200 25837
+"GET /users/ HTTP/1.1" 200 16629
+C:\Users\Admin\Desktop\togo\togo_service\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\togo_service\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /users/
+"GET /users/ HTTP/1.1" 404 5453
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET / HTTP/1.1" 200 16593
