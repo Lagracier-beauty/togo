@@ -75,7 +75,7 @@
                         
                         {% if provider.hourly_rate %}
                             <div>
-                                <div style="font-weight: 600; font-size: 1.25rem; color: var(--primary);">{{ provider.hourly_rate }}€</div>
+                                <div style="font-weight: 600; font-size: 1.25rem; color: var(--primary);">{{ provider.hourly_rate }} FCFA</div>
                                 <div style="font-size: 0.875rem; color: var(--text-muted);">Tarif horaire</div>
                             </div>
                         {% endif %}
@@ -125,11 +125,11 @@
                         
                         <div style="text-align: right;">
                             {% if service.pricing_type == 'fixed' %}
-                                <div style="font-weight: 600; color: var(--primary);">{{ service.base_price }}€</div>
+                                <div style="font-weight: 600; color: var(--primary);">{{ service.base_price }} FCFA</div>
                             {% elif service.pricing_type == 'hourly' %}
-                                <div style="font-weight: 600; color: var(--primary);">{{ service.base_price }}€/h</div>
+                                <div style="font-weight: 600; color: var(--primary);">{{ service.base_price }} FCFA/h</div>
                             {% else %}
-                                <div style="font-weight: 600; color: var(--primary);">{{ service.min_price }}€ - {{ service.max_price }}€</div>
+                                <div style="font-weight: 600; color: var(--primary);">{{ service.min_price }} FCFA - {{ service.max_price }} FCFA</div>
                             {% endif %}
                         </div>
                     </div>

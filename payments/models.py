@@ -100,7 +100,7 @@ class Transaction(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return f"Transaction {self.transaction_id} - {self.amount}€"
+        return f"Transaction {self.transaction_id} - {self.amount} FCFA"
 
     def save(self, *args, **kwargs):
         if not self.transaction_id:
@@ -126,7 +126,7 @@ class ProviderEarnings(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Revenus {self.provider.user.username} - {self.net_amount}€"
+        return f"Revenus {self.provider.user.username} - {self.net_amount} FCFA"
 
 class WithdrawalRequest(models.Model):
     """Demandes de retrait des prestataires"""
@@ -157,4 +157,4 @@ class WithdrawalRequest(models.Model):
         ordering = ['-requested_at']
 
     def __str__(self):
-        return f"Retrait {self.provider.user.username} - {self.amount}€"
+        return f"Retrait {self.provider.user.username} - {self.amount} FCFA"
