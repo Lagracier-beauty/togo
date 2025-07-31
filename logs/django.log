@@ -1638,3 +1638,8 @@ C:\Users\Admin\Desktop\togo\payments\models.py changed, reloading.
 C:\Users\Admin\Desktop\togo\payments\models.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+"GET /providers/ HTTP/1.1" 200 37740
+"GET /static/css/style.css HTTP/1.1" 304 0
+"GET /static/css/style-fixed.css HTTP/1.1" 304 0
+"GET /providers/1/ HTTP/1.1" 200 17058
+"GET /static/js/main.js HTTP/1.1" 304 0
