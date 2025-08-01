@@ -1889,3 +1889,9 @@ Watching for file changes with StatReloader
 "GET /login/ HTTP/1.1" 200 15387
 "POST /login/ HTTP/1.1" 302 0
 "GET / HTTP/1.1" 200 17237
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16840
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 200 15387
+"POST /users/login/?next=/dashboard/admin/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 35702
