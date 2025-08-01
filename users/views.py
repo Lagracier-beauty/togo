@@ -150,7 +150,17 @@ def user_login(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, f'Bon retour, {user.first_name or user.username} !')
-                return redirect('users:home')
+                
+                # Gérer la redirection intelligente selon le type d'utilisateur
+                next_url = request.GET.get('next')
+                if next_url:
+                    return redirect(next_url)
+                elif user.is_staff or user.is_superuser:
+                    # Redirection des admins vers le dashboard admin
+                    return redirect('/dashboard/admin/')
+                else:
+                    # Redirection des utilisateurs normaux vers la page d'accueil
+                    return redirect('users:home')
             else:
                 messages.error(request, 'Identifiants incorrects.')
     else:

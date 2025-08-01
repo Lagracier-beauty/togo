@@ -223,7 +223,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 # Authentication settings
 LOGIN_URL = '/users/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'  # Redirection par défaut vers la page d'accueil
 LOGOUT_REDIRECT_URL = '/'
 
 # Cache (optionnel, pour améliorer les performances)

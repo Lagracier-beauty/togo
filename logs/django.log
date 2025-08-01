@@ -1824,3 +1824,68 @@ Not Found: /users/
 "GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 200 22572
 "GET /providers/ HTTP/1.1" 200 35768
 "GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 16599
+"GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 304 0
+"GET /dashboard/admin HTTP/1.1" 301 0
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /users/login/
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 404 5494
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /users/login/
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 404 5494
+"GET /favicon.ico HTTP/1.1" 301 0
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /users/login/
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 404 5494
+"GET /dashboard/admin/ HTTP/1.1" 302 0
+Not Found: /users/login/
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 404 5494
+C:\Users\Admin\Desktop\togo\togo_service\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /users/login/?next=/dashboard/admin/ HTTP/1.1" 200 15387
+"GET /static/js/main.js HTTP/1.1" 200 4869
+"GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 200 22572
+"GET /static/css/style.css HTTP/1.1" 200 37442
+"POST /users/login/?next=/dashboard/admin/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 17240
+"GET /services/ HTTP/1.1" 200 39837
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16840
+"GET / HTTP/1.1" 200 16599
+C:\Users\Admin\Desktop\togo\togo_service\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16599
+"GET /login/ HTTP/1.1" 200 15387
+"POST /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 17240
+"GET /providers/ HTTP/1.1" 200 36191
+"GET /support/ HTTP/1.1" 200 25064
+"GET /services/ HTTP/1.1" 200 39837
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16840
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16599
+C:\Users\Admin\Desktop\togo\users\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Admin\Desktop\togo\togo_service\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16599
+"GET /static/js/main.js HTTP/1.1" 200 4869
+"GET /static/css/style-fixed.css?v=2.6 HTTP/1.1" 200 22572
+"GET /static/css/style.css HTTP/1.1" 200 37442
+"GET /static/favicon.ico HTTP/1.1" 404 1960
+"GET /services/ HTTP/1.1" 200 39414
+"GET /providers/ HTTP/1.1" 200 35768
+"GET /support/ HTTP/1.1" 200 24641
+"GET /login/ HTTP/1.1" 200 15387
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/admin/ HTTP/1.1" 200 35702
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 16840
+"GET /login/ HTTP/1.1" 200 15387
+"POST /login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 17237

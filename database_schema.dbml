@@ -1,0 +1,479 @@
+// ===== SCHÉMA DE BASE DE DONNÉES TOG-SERVICES =====
+// Format DBML pour db.docs
+// Docs: https://dbml.dbdiagram.io/docs
+
+// ===== MODÈLE UTILISATEUR DJANGO (User) =====
+Table users {
+  id integer [primary key, increment]
+  username varchar(150) [unique, not null]
+  email varchar(254) [unique, not null]
+  first_name varchar(150)
+  last_name varchar(150)
+  password varchar(128) [not null]
+  is_staff boolean [default: false]
+  is_superuser boolean [default: false]
+  is_active boolean [default: true]
+  date_joined timestamp [default: `now()`]
+  last_login timestamp
+}
+
+// ===== MODÈLES UTILISATEURS (users app) =====
+Table user_profiles {
+  id integer [primary key, increment]
+  user_id integer [unique, not null]
+  phone varchar(20)
+  phone_verified boolean [default: false]
+  phone_verification_code varchar(6)
+  phone_verification_expires timestamp
+  profile_picture varchar
+  date_of_birth date
+  gender varchar(10) [note: 'male, female, other']
+  address text
+  city varchar(100)
+  postal_code varchar(10)
+  country varchar(50) [default: 'Togo']
+  current_latitude decimal(10,8)
+  current_longitude decimal(11,8)
+  location_updated_at timestamp
+  preferred_language varchar(10) [default: 'fr', note: 'fr, en, ee']
+  preferred_currency varchar(5) [default: 'XOF']
+  email_notifications boolean [default: true]
+  sms_notifications boolean [default: true]
+  push_notifications boolean [default: true]
+  is_verified boolean [default: false]
+  is_premium boolean [default: false]
+  premium_expires timestamp
+  google_id varchar(100)
+  facebook_id varchar(100)
+  total_orders integer [default: 0]
+  total_spent decimal(12,2) [default: 0]
+  average_rating_given decimal(3,2) [default: 0]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp [default: `now()`]
+}
+
+Table user_addresses {
+  id integer [primary key, increment]
+  user_id integer [not null]
+  type varchar(10) [default: 'other', note: 'home, work, other']
+  name varchar(100) [not null]
+  address text [not null]
+  city varchar(100) [not null]
+  postal_code varchar(10)
+  latitude decimal(10,8)
+  longitude decimal(11,8)
+  is_default boolean [default: false]
+  created_at timestamp [default: `now()`]
+}
+
+Table notifications {
+  id integer [primary key, increment]
+  user_id integer [not null]
+  title varchar(200) [not null]
+  message text [not null]
+  notification_type varchar(20) [note: 'order_status, payment, message, promotion, system, reminder']
+  order_id integer
+  is_read boolean [default: false]
+  is_sent_email boolean [default: false]
+  is_sent_sms boolean [default: false]
+  is_sent_push boolean [default: false]
+  send_at timestamp
+  data json [default: '{}']
+  created_at timestamp [default: `now()`]
+  read_at timestamp
+}
+
+Table user_sessions {
+  id integer [primary key, increment]
+  user_id integer [not null]
+  session_key varchar(40) [unique, not null]
+  device_type varchar(20) [default: 'web', note: 'web, mobile, tablet, desktop']
+  device_info text
+  ip_address varchar(45) [not null]
+  location_city varchar(100)
+  location_country varchar(100)
+  is_active boolean [default: true]
+  last_activity timestamp [default: `now()`]
+  created_at timestamp [default: `now()`]
+}
+
+Table chats {
+  id integer [primary key, increment]
+  customer_id integer [not null]
+  provider_id integer [not null]
+  order_id integer
+  chat_type varchar(10) [default: 'order', note: 'order, support, general']
+  is_active boolean [default: true]
+  created_at timestamp [default: `now()`]
+  last_message_at timestamp [default: `now()`]
+}
+
+Table chat_messages {
+  id integer [primary key, increment]
+  chat_id integer [not null]
+  sender_id integer [not null]
+  message_type varchar(10) [default: 'text', note: 'text, image, location, system']
+  content text
+  attachment varchar
+  latitude decimal(10,8)
+  longitude decimal(11,8)
+  is_read boolean [default: false]
+  is_system boolean [default: false]
+  created_at timestamp [default: `now()`]
+  read_at timestamp
+}
+
+// ===== MODÈLES PRESTATAIRES (providers app) =====
+Table providers {
+  id integer [primary key, increment]
+  user_id integer [unique, not null]
+  service_type varchar(20) [note: 'livraison, transport, menage, bricolage, autre']
+  description text
+  experience_years integer [default: 0]
+  hourly_rate decimal(10,2) [default: 0]
+  is_available boolean [default: true]
+  status varchar(20) [default: 'pending', note: 'pending, approved, rejected, suspended']
+  rating decimal(3,2) [default: 0]
+  total_services integer [default: 0]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp [default: `now()`]
+}
+
+Table provider_documents {
+  id integer [primary key, increment]
+  provider_id integer [not null]
+  document_type varchar(20) [note: 'cni, passport, license, certificate, other']
+  file varchar [not null]
+  is_verified boolean [default: false]
+  uploaded_at timestamp [default: `now()`]
+}
+
+Table provider_zones {
+  id integer [primary key, increment]
+  provider_id integer [not null]
+  city varchar(100) [not null]
+  neighborhood varchar(100)
+  is_active boolean [default: true]
+}
+
+// ===== MODÈLES SERVICES (services app) =====
+Table service_categories {
+  id integer [primary key, increment]
+  name varchar(100) [unique, not null]
+  description text
+  icon varchar(50)
+  color varchar(7) [default: '#007bff']
+  is_active boolean [default: true]
+  order integer [default: 0]
+  created_at timestamp [default: `now()`]
+}
+
+Table services {
+  id integer [primary key, increment]
+  category_id integer [not null]
+  provider_id integer [not null]
+  title varchar(200) [not null]
+  description text [not null]
+  pricing_type varchar(20) [note: 'fixed, hourly, distance, custom']
+  base_price decimal(10,2) [not null]
+  min_price decimal(10,2)
+  max_price decimal(10,2)
+  duration_minutes integer
+  is_instant boolean [default: false]
+  is_bookable boolean [default: true]
+  max_advance_days integer [default: 30]
+  is_active boolean [default: true]
+  featured boolean [default: false]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp [default: `now()`]
+}
+
+Table service_images {
+  id integer [primary key, increment]
+  service_id integer [not null]
+  image varchar [not null]
+  caption varchar(200)
+  is_primary boolean [default: false]
+  uploaded_at timestamp [default: `now()`]
+}
+
+Table service_availability {
+  id integer [primary key, increment]
+  service_id integer [not null]
+  weekday integer [note: '0-6 (Monday-Sunday)']
+  start_time time [not null]
+  end_time time [not null]
+  is_available boolean [default: true]
+}
+
+// ===== MODÈLES COMMANDES (orders app) =====
+Table orders {
+  id integer [primary key, increment]
+  customer_id integer [not null]
+  service_id integer [not null]
+  provider_id integer [not null]
+  order_number varchar(20) [unique, not null]
+  status varchar(20) [default: 'pending', note: 'pending, accepted, rejected, in_progress, on_route, arrived, completed, cancelled, disputed']
+  priority varchar(10) [default: 'low', note: 'low, medium, high']
+  description text [not null]
+  special_instructions text
+  pickup_address text
+  pickup_latitude decimal(10,8)
+  pickup_longitude decimal(11,8)
+  delivery_address text
+  delivery_latitude decimal(10,8)
+  delivery_longitude decimal(11,8)
+  scheduled_datetime timestamp
+  estimated_duration integer
+  estimated_price decimal(10,2) [not null]
+  final_price decimal(10,2)
+  additional_fees decimal(10,2) [default: 0]
+  total_amount decimal(10,2)
+  created_at timestamp [default: `now()`]
+  accepted_at timestamp
+  started_at timestamp
+  completed_at timestamp
+  customer_notes text
+  provider_notes text
+  admin_notes text
+}
+
+Table order_tracking {
+  id integer [primary key, increment]
+  order_id integer [not null]
+  status varchar(20) [not null]
+  message text
+  latitude decimal(10,8)
+  longitude decimal(11,8)
+  timestamp timestamp [default: `now()`]
+}
+
+Table order_images {
+  id integer [primary key, increment]
+  order_id integer [not null]
+  image varchar [not null]
+  caption varchar(200)
+  uploaded_by_id integer [not null]
+  is_before boolean [default: true]
+  uploaded_at timestamp [default: `now()`]
+}
+
+Table order_ratings {
+  id integer [primary key, increment]
+  order_id integer [unique, not null]
+  customer_rating integer [note: '1-5']
+  customer_comment text
+  provider_rating integer [note: '1-5']
+  provider_comment text
+  created_at timestamp [default: `now()`]
+}
+
+// ===== MODÈLES PAIEMENTS (payments app) =====
+Table payment_methods {
+  id integer [primary key, increment]
+  name varchar(100) [not null]
+  payment_type varchar(20) [note: 'mobile_money, credit_card, debit_card, bank_transfer, cash']
+  provider varchar(20) [note: 'tmoney, flooz, visa, mastercard, stripe, paypal']
+  is_active boolean [default: true]
+  processing_fee_percent decimal(5,2) [default: 0]
+  processing_fee_fixed decimal(10,2) [default: 0]
+  icon varchar(50)
+  created_at timestamp [default: `now()`]
+}
+
+Table user_payment_methods {
+  id integer [primary key, increment]
+  user_id integer [not null]
+  payment_method_id integer [not null]
+  account_number varchar(100) [not null]
+  account_name varchar(100)
+  is_default boolean [default: false]
+  is_verified boolean [default: false]
+  created_at timestamp [default: `now()`]
+}
+
+Table transactions {
+  id integer [primary key, increment]
+  order_id integer
+  user_id integer [not null]
+  payment_method_id integer [not null]
+  transaction_id varchar(100) [unique, not null]
+  external_transaction_id varchar(100)
+  transaction_type varchar(20) [note: 'payment, commission, payout, refund, withdrawal']
+  status varchar(20) [default: 'pending', note: 'pending, processing, completed, failed, cancelled, refunded']
+  amount decimal(10,2) [not null]
+  processing_fee decimal(10,2) [default: 0]
+  platform_commission decimal(10,2) [default: 0]
+  net_amount decimal(10,2) [not null]
+  description text
+  metadata json [default: '{}']
+  failure_reason text
+  created_at timestamp [default: `now()`]
+  processed_at timestamp
+  completed_at timestamp
+}
+
+Table provider_earnings {
+  id integer [primary key, increment]
+  provider_id integer [not null]
+  order_id integer [not null]
+  transaction_id integer [not null]
+  gross_amount decimal(10,2) [not null]
+  platform_commission decimal(10,2) [not null]
+  net_amount decimal(10,2) [not null]
+  is_paid boolean [default: false]
+  paid_at timestamp
+  created_at timestamp [default: `now()`]
+}
+
+Table withdrawal_requests {
+  id integer [primary key, increment]
+  provider_id integer [not null]
+  payment_method_id integer [not null]
+  account_number varchar(100) [not null]
+  amount decimal(10,2) [not null]
+  processing_fee decimal(10,2) [default: 0]
+  net_amount decimal(10,2) [not null]
+  status varchar(20) [default: 'pending', note: 'pending, approved, rejected, completed']
+  notes text
+  admin_notes text
+  requested_at timestamp [default: `now()`]
+  processed_at timestamp
+  completed_at timestamp
+}
+
+// ===== MODÈLES SUPPORT (support app) =====
+Table faqs {
+  id integer [primary key, increment]
+  category varchar(20) [note: 'general, account, orders, payments, providers, technical']
+  question text [not null]
+  answer text [not null]
+  is_featured boolean [default: false]
+  order integer [default: 0]
+  views_count integer [default: 0]
+  is_active boolean [default: true]
+  created_at timestamp [default: `now()`]
+  updated_at timestamp [default: `now()`]
+}
+
+Table support_tickets {
+  id integer [primary key, increment]
+  user_id integer [not null]
+  order_id integer
+  assigned_to_id integer
+  ticket_number varchar(20) [unique, not null]
+  subject varchar(200) [not null]
+  description text [not null]
+  category varchar(20) [note: 'general, account, order, payment, provider, technical, dispute, other']
+  priority varchar(10) [default: 'medium', note: 'low, medium, high, urgent']
+  status varchar(20) [default: 'open', note: 'open, in_progress, waiting_user, waiting_provider, resolved, closed']
+  created_at timestamp [default: `now()`]
+  updated_at timestamp [default: `now()`]
+  resolved_at timestamp
+  closed_at timestamp
+  satisfaction_rating integer [note: '1-5']
+  satisfaction_comment text
+}
+
+Table support_messages {
+  id integer [primary key, increment]
+  ticket_id integer [not null]
+  sender_id integer [not null]
+  message text [not null]
+  is_internal boolean [default: false]
+  is_system boolean [default: false]
+  created_at timestamp [default: `now()`]
+}
+
+Table support_attachments {
+  id integer [primary key, increment]
+  ticket_id integer [not null]
+  message_id integer
+  file varchar [not null]
+  filename varchar(255) [not null]
+  file_size integer [not null]
+  uploaded_by_id integer [not null]
+  uploaded_at timestamp [default: `now()`]
+}
+
+Table disputes {
+  id integer [primary key, increment]
+  order_id integer [unique, not null]
+  customer_id integer [not null]
+  provider_id integer [not null]
+  mediator_id integer
+  dispute_type varchar(20) [note: 'service_quality, no_show, payment, pricing, damage, behavior, other']
+  customer_description text [not null]
+  provider_response text
+  admin_notes text
+  status varchar(20) [default: 'open', note: 'open, investigating, mediation, resolved, closed']
+  resolution varchar(20) [note: 'refund_full, refund_partial, service_redo, provider_warning, provider_suspension, no_action, other']
+  resolution_notes text
+  refund_amount decimal(10,2) [default: 0]
+  compensation_amount decimal(10,2) [default: 0]
+  created_at timestamp [default: `now()`]
+  resolved_at timestamp
+  closed_at timestamp
+}
+
+// ===== RELATIONS =====
+
+// User relations
+Ref: user_profiles.user_id > users.id // one-to-one
+Ref: user_addresses.user_id > users.id // many-to-one
+Ref: notifications.user_id > users.id // many-to-one
+Ref: user_sessions.user_id > users.id // many-to-one
+Ref: chats.customer_id > users.id // many-to-one
+Ref: chat_messages.sender_id > users.id // many-to-one
+Ref: order_images.uploaded_by_id > users.id // many-to-one
+Ref: transactions.user_id > users.id // many-to-one
+Ref: user_payment_methods.user_id > users.id // many-to-one
+Ref: support_tickets.user_id > users.id // many-to-one
+Ref: support_tickets.assigned_to_id > users.id // many-to-one
+Ref: support_messages.sender_id > users.id // many-to-one
+Ref: support_attachments.uploaded_by_id > users.id // many-to-one
+Ref: disputes.customer_id > users.id // many-to-one
+Ref: disputes.mediator_id > users.id // many-to-one
+
+// Provider relations
+Ref: providers.user_id > users.id // one-to-one
+Ref: provider_documents.provider_id > providers.id // many-to-one
+Ref: provider_zones.provider_id > providers.id // many-to-one
+Ref: services.provider_id > providers.id // many-to-one
+Ref: chats.provider_id > providers.id // many-to-one
+Ref: orders.provider_id > providers.id // many-to-one
+Ref: provider_earnings.provider_id > providers.id // many-to-one
+Ref: withdrawal_requests.provider_id > providers.id // many-to-one
+Ref: disputes.provider_id > providers.id // many-to-one
+
+// Service relations
+Ref: services.category_id > service_categories.id // many-to-one
+Ref: service_images.service_id > services.id // many-to-one
+Ref: service_availability.service_id > services.id // many-to-one
+
+// Order relations
+Ref: orders.customer_id > users.id // many-to-one
+Ref: orders.service_id > services.id // many-to-one
+Ref: order_tracking.order_id > orders.id // many-to-one
+Ref: order_images.order_id > orders.id // many-to-one
+Ref: order_ratings.order_id > orders.id // one-to-one
+Ref: chats.order_id > orders.id // many-to-one
+Ref: transactions.order_id > orders.id // many-to-one
+Ref: provider_earnings.order_id > orders.id // many-to-one
+Ref: support_tickets.order_id > orders.id // many-to-one
+Ref: disputes.order_id > orders.id // one-to-one
+Ref: notifications.order_id > orders.id // many-to-one
+
+// Chat relations
+Ref: chat_messages.chat_id > chats.id // many-to-one
+
+// Payment relations
+Ref: user_payment_methods.payment_method_id > payment_methods.id // many-to-one
+Ref: transactions.payment_method_id > payment_methods.id // many-to-one
+Ref: withdrawal_requests.payment_method_id > payment_methods.id // many-to-one
+Ref: provider_earnings.transaction_id > transactions.id // many-to-one
+
+// Support relations
+Ref: support_messages.ticket_id > support_tickets.id // many-to-one
+Ref: support_attachments.ticket_id > support_tickets.id // many-to-one
+Ref: support_attachments.message_id > support_messages.id // many-to-one 

@@ -171,7 +171,6 @@ Password: [défini lors de createsuperuser]
 
 ### 👥 **CLIENTS** (password123)
 ```
-marie_client    - Marie Dupont         - marie@example.com
 pierre_client   - Pierre Martin        - pierre@example.com  
 ama_client      - Ama Koffi            - ama@example.com
 kofi_client     - Kofi Asante          - kofi@example.com
